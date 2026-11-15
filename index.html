@@ -1,151 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Peninsula Insights | Advisory and consultation</title>
-<meta name="description" content="Peninsula Insights is a consultancy that helps organisations make clear, well-evidenced decisions. Book a consultation.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#F2F5F6; --surface:#FFFFFF; --ink:#0E2A3B; --muted:#4A6272; --line:#D3DEE3;
-  --deep:#0E2A3B; --on-deep:#F2F5F6; --accent:#B8832F; --accent-ink:#0E2A3B; --focus:#1D6FA3;
-  --serif:"Fraunces", Georgia, "Times New Roman", serif;
-  --sans:"Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  color-scheme:light;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#0A1B26; --surface:#102635; --ink:#E8EFF2; --muted:#9FB4C0; --line:#22404F;
-    --deep:#07141D; --on-deep:#E8EFF2; --accent:#D9A24A; --accent-ink:#07141D; --focus:#6FB6E3;
-    color-scheme:dark;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#0A1B26; --surface:#102635; --ink:#E8EFF2; --muted:#9FB4C0; --line:#22404F;
-  --deep:#07141D; --on-deep:#E8EFF2; --accent:#D9A24A; --accent-ink:#07141D; --focus:#6FB6E3;
-  color-scheme:dark;
-}
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px);scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
-img,svg{max-width:100%}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:4px}
-.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
-h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.12;letter-spacing:-.015em;margin:0}
-h1{font-size:clamp(2.5rem,6.4vw,4.6rem);font-weight:400}
-h2{font-size:clamp(1.9rem,4vw,2.75rem)}
-h3{font-size:1.35rem;line-height:1.25}
-p{margin:0}
-.lead{font-size:1.2rem;color:var(--muted);max-width:56ch}
-
-/* header */
-header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:68px}
-.brand{font-family:var(--serif);font-size:1.3rem;font-weight:600;text-decoration:none;letter-spacing:-.01em}
-nav ul{display:flex;gap:1.75rem;list-style:none;margin:0;padding:0;align-items:center}
-nav a{text-decoration:none;font-weight:500;font-size:.98rem;color:var(--muted)}
-nav a:hover{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.7rem 1.5rem;border-radius:999px;background:var(--accent);color:var(--accent-ink);font:600 1rem var(--sans);text-decoration:none;border:0;cursor:pointer;transition:transform .15s,filter .15s}
-.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
-.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
-nav .btn{min-height:42px;padding:.45rem 1.2rem;color:var(--accent-ink)}
-nav a.btn:hover{color:var(--accent-ink)}
-.menu-btn{display:none;background:none;border:1.5px solid var(--line);color:var(--ink);border-radius:10px;min-height:44px;padding:0 .9rem;font:500 1rem var(--sans);cursor:pointer}
-@media (max-width:820px){
-  .menu-btn{display:inline-block}
-  nav{position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);display:none}
-  nav.open{display:block}
-  nav ul{flex-direction:column;align-items:stretch;gap:0;padding:.5rem 1.25rem 1.25rem}
-  nav li a{display:block;padding:.85rem 0;border-bottom:1px solid var(--line)}
-  nav li:last-child a{border:0;margin-top:.75rem;text-align:center}
-}
-
-/* hero */
-.hero{position:relative;overflow:hidden;padding:clamp(3.5rem,9vw,7rem) 0 clamp(3.5rem,8vw,6rem)}
-.hero .wrap{position:relative;z-index:1;display:grid;gap:1.75rem;max-width:860px;margin-left:max(1.25rem,calc((100% - 1120px)/2))}
-.hero-actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:.5rem}
-.contours{position:absolute;right:-8%;top:50%;transform:translateY(-50%);width:min(62%,720px);color:var(--accent);opacity:.5;pointer-events:none}
-.contours path{fill:none;stroke:currentColor;stroke-width:1.4}
-@media (max-width:820px){.contours{width:130%;right:-45%;top:auto;bottom:-10%;transform:none;opacity:.28}}
-.hero-line{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
-@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.draw path{stroke-dasharray:1600;stroke-dashoffset:1600;animation:draw 3.2s ease-out forwards}
-.draw path:nth-child(2){animation-delay:.25s}.draw path:nth-child(3){animation-delay:.5s}.draw path:nth-child(4){animation-delay:.75s}.draw path:nth-child(5){animation-delay:1s}
-@keyframes draw{to{stroke-dashoffset:0}}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .hero-line{animation:none}
-  .draw path{animation:none;stroke-dasharray:none;stroke-dashoffset:0}
-  .btn{transition:none}
-}
-
-/* sections */
-section{padding:clamp(3.5rem,8vw,6rem) 0}
-.head{display:grid;gap:1rem;margin-bottom:2.75rem;max-width:62ch}
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:0;border-top:1px solid var(--line)}
-.service{padding:2rem 1.75rem 2.25rem 0;border-bottom:1px solid var(--line);display:grid;gap:.7rem;align-content:start}
-.service p{color:var(--muted)}
-@media (min-width:900px){.service{border-bottom:0;padding-right:2.25rem}.service+.service{padding-left:2.25rem;border-left:1px solid var(--line)}}
-.deep{background:var(--deep);color:var(--on-deep)}
-.deep .lead,.deep p{color:color-mix(in srgb,var(--on-deep) 78%,transparent)}
-.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s;max-width:820px}
-.steps li{counter-increment:s;display:grid;grid-template-columns:3.2rem 1fr;gap:1rem;padding:1.6rem 0;border-top:1px solid color-mix(in srgb,var(--on-deep) 22%,transparent)}
-.steps li::before{content:counter(s);font-family:var(--serif);font-size:2.1rem;line-height:1;color:var(--accent)}
-.steps h3{margin-bottom:.35rem}
-.about{display:grid;gap:2.5rem;grid-template-columns:1fr}
-@media (min-width:900px){.about{grid-template-columns:1.1fr 1fr;gap:5rem;align-items:start}}
-.principles{display:grid;gap:1.5rem}
-.principles div{padding-left:1.25rem;border-left:3px solid var(--accent)}
-.principles p{color:var(--muted);margin-top:.25rem}
-.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:1rem;margin-top:2.5rem}
-.who div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.4rem}
-.who p{color:var(--muted);font-size:.98rem;margin-top:.35rem}
-
-/* consultation */
-.book{display:grid;gap:2.5rem}
-@media (min-width:900px){.book{grid-template-columns:1fr 1.15fr;gap:5rem;align-items:start}}
-.book ul{margin:1.25rem 0 0;padding-left:1.2rem;color:var(--muted)}
-.book li{margin:.4rem 0}
-form{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:clamp(1.4rem,4vw,2.25rem);display:grid;gap:1.15rem}
-.row{display:grid;gap:1.15rem}
-@media (min-width:600px){.row{grid-template-columns:1fr 1fr}}
-label{display:grid;gap:.4rem;font-weight:500;font-size:.98rem}
-input,select,textarea{font:400 1rem var(--sans);color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:.75rem .9rem;min-height:48px;width:100%}
-textarea{min-height:130px;resize:vertical}
-input:focus,select:focus,textarea:focus{outline:3px solid var(--focus);outline-offset:1px;border-color:var(--focus)}
-.hint{font-size:.9rem;color:var(--muted);font-weight:400}
-.err{color:#B3261E;font-size:.9rem;font-weight:500;min-height:1.1em}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .err{color:#FF9E94}}
-#status{font-size:.98rem;color:var(--muted)}
-
-footer{border-top:1px solid var(--line);padding:2.25rem 0;color:var(--muted);font-size:.95rem}
-footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Peninsula Insights | Advisory and Consultation</title>
+  <meta name="description" content="Peninsula Insights is a consultancy that helps organisations make clear, well-evidenced decisions. Book a consultation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 <header>
   <div class="wrap bar">
-    <a class="brand" href="#top">Peninsula Insights</a>
+    <a class="brand" href="index.html">Peninsula Insights</a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" aria-label="Main">
       <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#approach">Our approach</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a class="btn" href="#consult">Book a consultation</a></li>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a class="btn" href="contact.html">Book a consultation</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <main id="top">
+  <!-- Hero Section -->
   <div class="hero">
     <svg class="contours draw" viewBox="0 0 600 500" aria-hidden="true" focusable="false">
       <path d="M40 260C60 140 190 40 330 70c110 24 180 110 150 200-20 60-80 70-110 120-30 50-110 90-190 60C90 420 30 340 40 260Z"/>
@@ -158,12 +42,13 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-bet
       <h1 class="hero-line">Clear thinking for decisions that matter.</h1>
       <p class="lead hero-line" style="animation-delay:.12s">Peninsula Insights helps organisations understand where they stand, weigh their options, and act with confidence. We pair rigorous analysis with practical advice you can use the following week.</p>
       <div class="hero-actions hero-line" style="animation-delay:.24s">
-        <a class="btn" href="#consult">Book a consultation</a>
-        <a class="btn ghost" href="#services">See what we do</a>
+        <a class="btn" href="contact.html">Book a consultation</a>
+        <a class="btn ghost" href="services.html">See what we do</a>
       </div>
     </div>
   </div>
 
+  <!-- Services Overview -->
   <section id="services">
     <div class="wrap">
       <div class="head">
@@ -174,19 +59,26 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-bet
         <article class="service">
           <h3>Strategy and planning</h3>
           <p>Set direction, test priorities against your resources, and turn them into a plan your team can follow.</p>
+          <a class="service-link" href="services.html#strategy">Learn more &rarr;</a>
         </article>
         <article class="service">
           <h3>Research and analysis</h3>
           <p>Market, operational and stakeholder research that gives you evidence instead of assumptions.</p>
+          <a class="service-link" href="services.html#research">Learn more &rarr;</a>
         </article>
         <article class="service">
           <h3>Performance and change</h3>
           <p>Review how your organisation works today, find what slows it down, and support the changes that follow.</p>
+          <a class="service-link" href="services.html#performance">Learn more &rarr;</a>
         </article>
+      </div>
+      <div style="margin-top: 2rem;">
+        <a href="services.html" class="btn ghost sm">View full practice details &rarr;</a>
       </div>
     </div>
   </section>
 
+  <!-- Engagement Approach -->
   <section id="approach" class="deep">
     <div class="wrap">
       <div class="head">
@@ -199,9 +91,105 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-bet
         <li><div><h3>Recommend</h3><p>You receive clear options with trade-offs, and our recommendation on which to choose.</p></div></li>
         <li><div><h3>Support</h3><p>We stay alongside your team as the work is put in place, and review results with you.</p></div></li>
       </ol>
+      <div style="margin-top: 2.5rem;">
+        <a href="services.html" class="btn" style="background: var(--accent); color: var(--accent-ink);">Learn more about our methodology</a>
+      </div>
     </div>
   </section>
 
+  <!-- FEATURED PHOTOS & CASE DESCRIPTIONS SECTION -->
+  <section id="photos" style="background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+    <div class="wrap">
+      <div class="head" style="display: flex; flex-direction: column; gap: 0.75rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="gallery-badge" style="margin-bottom: 0.5rem;">Field Archive &amp; Photos</span>
+            <h2>Insights &amp; Field Photos</h2>
+            <p class="lead">Visual highlights from our recent strategic sessions, research fieldwork, and stakeholder workshops.</p>
+          </div>
+          <a href="gallery.html" class="btn ghost sm">View all photos &amp; descriptions &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Featured Photo Grid (3 items) -->
+      <div class="gallery-grid" style="margin-top: 1.5rem;">
+        
+        <!-- Featured Photo 1 -->
+        <article class="gallery-card" data-category="solar">
+          <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Solar-Powered Irrigation System photo">
+            <img class="gallery-img" src="photos/solar-irrigation-system.jpeg" alt="Solar Photovoltaic Pumping Infrastructure" loading="lazy">
+            <span class="gallery-expand-hint">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              Click to view
+            </span>
+          </div>
+          <div class="gallery-content">
+            <div class="gallery-meta">
+              <span class="gallery-badge">Solar Energy</span>
+              <span class="gallery-date">Habaasweyne &bull; Hiran</span>
+            </div>
+            <h3 class="gallery-title">Solar Photovoltaic Pumping Infrastructure</h3>
+            <p class="gallery-desc">Ground-mounted solar photovoltaic array powering high-capacity water pumping directly into agricultural irrigation canals, providing continuous zero-emission power for local farming communities.</p>
+            <div class="gallery-footer-action">
+              <button class="gallery-view-btn" data-action="open-modal">View photo &amp; details &rarr;</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Featured Photo 2 -->
+        <article class="gallery-card" data-category="irrigation">
+          <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Irrigation Canal Outfall photo">
+            <img class="gallery-img" src="photos/canal-water-discharge.jpeg" alt="Irrigation Canal Outfall and Water Distribution" loading="lazy">
+            <span class="gallery-expand-hint">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              Click to view
+            </span>
+          </div>
+          <div class="gallery-content">
+            <div class="gallery-meta">
+              <span class="gallery-badge">Irrigation</span>
+              <span class="gallery-date">Habaasweyne Village</span>
+            </div>
+            <h3 class="gallery-title">Irrigation Canal Outfall &amp; Distribution</h3>
+            <p class="gallery-desc">Concrete canal headworks and pressurized pipeline discharging water into distribution channels under the Climate-Resilient Food Systems initiative, securing reliable water downstream.</p>
+            <div class="gallery-footer-action">
+              <button class="gallery-view-btn" data-action="open-modal">View photo &amp; details &rarr;</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Featured Photo 3 -->
+        <article class="gallery-card" data-category="soil">
+          <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Soil Erosion Control Bunds photo">
+            <img class="gallery-img" src="photos/soil-erosion-bunds.jpeg" alt="Soil Erosion Control Bunds in Beledweyne" loading="lazy">
+            <span class="gallery-expand-hint">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              Click to view
+            </span>
+          </div>
+          <div class="gallery-content">
+            <div class="gallery-meta">
+              <span class="gallery-badge">Soil Conservation</span>
+              <span class="gallery-date">Beledweyne</span>
+            </div>
+            <h3 class="gallery-title">Soil Erosion Control Bunds (Caratuurka)</h3>
+            <p class="gallery-desc">Mechanical contour earth bunding across farming acreage in Beledweyne, stopping valuable topsoil runoff, trapping seasonal rainwater, and restoring degraded agricultural land.</p>
+            <div class="gallery-footer-action">
+              <button class="gallery-view-btn" data-action="open-modal">View photo &amp; details &rarr;</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Link to full gallery page -->
+      <div style="margin-top: 2.5rem; text-align: center;">
+        <a href="gallery.html" class="btn">Explore all photos &amp; project stories &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Overview Section -->
   <section id="about">
     <div class="wrap about">
       <div class="head" style="margin:0">
@@ -211,6 +199,9 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-bet
           <div><h3>Leaders</h3><p>Facing a choice with real consequences.</p></div>
           <div><h3>Institutions</h3><p>Schools, health and public bodies planning for growth.</p></div>
           <div><h3>Businesses</h3><p>Scaling and needing structure to do it well.</p></div>
+        </div>
+        <div style="margin-top: 2rem;">
+          <a href="about.html" class="btn ghost sm">Read more about our firm &rarr;</a>
         </div>
       </div>
       <div class="principles">
@@ -222,6 +213,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-bet
     </div>
   </section>
 
+  <!-- Consultation Banner Section -->
   <section id="consult" style="background:var(--surface);border-top:1px solid var(--line)">
     <div class="wrap book">
       <div>
@@ -232,15 +224,18 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-bet
           <li>You can meet online or in person.</li>
           <li>Nothing is shared outside our team.</li>
         </ul>
+        <div style="margin-top: 2rem;">
+          <a href="contact.html" class="btn ghost sm">Visit dedicated consultation page &rarr;</a>
+        </div>
       </div>
       <form id="form" novalidate>
         <div class="row">
           <label>Full name
-            <input name="name" autocomplete="name" required>
+            <input name="name" autocomplete="name" required placeholder="Your name">
             <span class="err" data-for="name"></span>
           </label>
           <label>Email address
-            <input name="email" type="email" autocomplete="email" required>
+            <input name="email" type="email" autocomplete="email" required placeholder="your.email@example.com">
             <span class="err" data-for="email"></span>
           </label>
         </div>
@@ -281,42 +276,56 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-bet
   </section>
 </main>
 
+<!-- Lightbox Modal for Homepage -->
+<div class="modal-backdrop" id="galleryModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-window">
+    <button class="modal-close" aria-label="Close photo view">&times;</button>
+    <div class="modal-img-wrap">
+      <img class="modal-img" src="" alt="Enlarged gallery photo">
+    </div>
+    <div class="modal-body">
+      <div style="display: flex; gap: 0.75rem; align-items: center;">
+        <span class="gallery-badge modal-badge"></span>
+      </div>
+      <h2 class="modal-title" style="font-size: 1.5rem;"></h2>
+      <p class="modal-desc" style="color: var(--muted); font-size: 1rem; line-height: 1.6;"></p>
+    </div>
+  </div>
+</div>
+
 <footer>
   <div class="wrap">
-    <span>&copy; <span id="yr">2026</span> Peninsula Insights. All rights reserved.</span>
-    <span>peninsulainsights.com</span>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">Peninsula Insights</a>
+        <p>A strategic consultancy helping leadership teams, institutions, and growing businesses make clear, well-evidenced decisions.</p>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 0.85rem;">Navigation</h4>
+        <ul class="footer-links">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="gallery.html">Gallery &amp; Photos</a></li>
+          <li><a href="contact.html">Book a Consultation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 0.85rem;">Get in touch</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:info@peninsulainsights.com">info@peninsulainsights.com</a></li>
+          <li><span>Two working days reply</span></li>
+          <li><a href="contact.html">Consultation Request &rarr;</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span class="dynamic-yr">2026</span> Peninsula Insights. All rights reserved.</span>
+      <span>peninsulainsights.com</span>
+    </div>
   </div>
 </footer>
 
-<script>
-(function(){
-  var btn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
-  btn.addEventListener('click',function(){
-    var o=nav.classList.toggle('open');
-    btn.setAttribute('aria-expanded',o);
-    btn.textContent=o?'Close':'Menu';
-  });
-  nav.addEventListener('click',function(e){
-    if(e.target.tagName==='A'){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.textContent='Menu';}
-  });
-  document.getElementById('yr').textContent=new Date().getFullYear();
-
-  var form=document.getElementById('form'),status=document.getElementById('status');
-  var TO='info@peninsulainsights.com';
-  function setErr(n,m){form.querySelector('[data-for="'+n+'"]').textContent=m;}
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    var f=form.elements,ok=true;
-    setErr('name','');setErr('email','');setErr('topic','');
-    if(!f.name.value.trim()){setErr('name','Enter your name.');ok=false;}
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email.value.trim())){setErr('email','Enter a valid email address.');ok=false;}
-    if(!f.topic.value){setErr('topic','Choose a topic.');ok=false;}
-    if(!ok){status.textContent='Please fix the highlighted fields.';return;}
-    var body=['Name: '+f.name.value,'Email: '+f.email.value,'Organisation: '+f.org.value,'Phone: '+f.phone.value,'Topic: '+f.topic.value,'Format: '+f.format.value,'','Message:',f.message.value].join('\n');
-    window.location.href='mailto:'+TO+'?subject='+encodeURIComponent('Consultation request: '+f.name.value)+'&body='+encodeURIComponent(body);
-    status.textContent='Your email app should open with the request ready to send. If it does not, write to '+TO+'.';
-  });
-})();
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>

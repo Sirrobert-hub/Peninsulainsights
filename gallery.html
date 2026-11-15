@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Project Gallery &amp; Field Archive | Peninsula Insights</title>
+  <meta name="description" content="Explore on-the-ground photos and detailed project descriptions of Peninsula Insights field initiatives, climate-resilient food systems, irrigation infrastructure, and community advisory.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Peninsula Insights</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="gallery.html">Gallery</a></li>
+        <li><a class="btn" href="contact.html">Book a consultation</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Page Header -->
+  <section class="page-hero">
+    <svg class="contours" viewBox="0 0 600 500" aria-hidden="true" focusable="false">
+      <path d="M40 260C60 140 190 40 330 70c110 24 180 110 150 200-20 60-80 70-110 120-30 50-110 90-190 60C90 420 30 340 40 260Z"/>
+      <path d="M85 262c18-100 120-170 235-150 90 16 140 86 118 154-16 48-64 60-90 102-26 42-92 70-150 48-70-26-125-92-113-154Z"/>
+      <path d="M130 264c14-70 84-116 170-104 66 10 98 60 82 108-12 36-48 46-68 80-20 32-70 50-110 34-54-22-84-70-74-118Z"/>
+    </svg>
+    <div class="wrap">
+      <span class="page-tag">Field Work &amp; Visual Archive</span>
+      <h1>Field Photos &amp; Project Insights</h1>
+      <p class="lead">Documenting on-the-ground interventions: climate-resilient irrigation infrastructure, solar energy systems, soil conservation bunds, and sustainable livelihood programs.</p>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Grid Section -->
+  <section class="gallery-section">
+    <div class="wrap">
+      
+      <!-- Filter Controls -->
+      <div class="gallery-filters" role="group" aria-label="Filter photos by category">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="irrigation">Irrigation &amp; Water</button>
+        <button class="filter-btn" data-filter="solar">Solar Energy</button>
+        <button class="filter-btn" data-filter="soil">Soil Conservation</button>
+        <button class="filter-btn" data-filter="agriculture">Agriculture &amp; Crops</button>
+        <button class="filter-btn" data-filter="livelihoods">Livelihoods &amp; Apiculture</button>
+      </div>
+
+      <!-- Photo Cards Grid -->
+      <div class="gallery-grid">
+
+        <!-- Photo 1: Solar Irrigation -->
+        <article class="gallery-card" data-category="solar">
+          <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Solar-Powered Irrigation Pumping System photo">
+            <img class="gallery-img" src="photos/solar-irrigation-system.jpeg" alt="Solar-Powered Irrigation Pumping System in Habaasweyne Village" loading="lazy">
+            <span class="gallery-expand-hint">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              Click to view
+            </span>
+          </div>
+          <div class="gallery-content">
+            <div class="gallery-meta">
+              <span class="gallery-badge">Solar Energy</span>
+              <span class="gallery-date">Habaasweyne &bull; Hiran</span>
+            </div>
+            <h3 class="gallery-title">Solar Photovoltaic Pumping Infrastructure</h3>
+            <p class="gallery-desc">Ground-mounted solar photovoltaic array with protective mesh enclosure, delivering continuous zero-emission energy to high-volume irrigation pumps. By replacing expensive diesel generators, this system delivers an economical, reliable water supply directly into agricultural canals for smallholder farmers.</p>
+            <div class="gallery-footer-action">
+              <button class="gallery-view-btn" data-action="open-modal">View photo &amp; details &rarr;</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Photo 2: Canal Water Discharge Outfall -->
+        <article class="gallery-card" data-category="irrigation">
+          <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Irrigation Canal Outfall &amp; Water Distribution photo">
+            <img class="gallery-img" src="photos/canal-water-discharge.jpeg" alt="Irrigation Canal Outfall &amp; Water Distribution in Habaasweyne" loading="lazy">
+            <span class="gallery-expand-hint">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              Click to view
+            </span>
+          </div>
+          <div class="gallery-content">
+            <div class="gallery-meta">
+              <span class="gallery-badge">Irrigation &amp; Water</span>
+              <span class="gallery-date">Habaasweyne Village</span>
+            </div>
+            <h3 class="gallery-title">Irrigation Canal Outfall &amp; Water Distribution</h3>
+            <p class="gallery-desc">Concrete-reinforced canal headworks and pressurized pipeline discharging fresh irrigation water into main supply channels. Part of the Climate-Resilient Food Systems project, this installation regulates water flow, eliminates silt buildup, and protects adjacent banks from water logging and erosion.</p>
+            <div class="gallery-footer-action">
+              <button class="gallery-view-btn" data-action="open-modal">View photo &amp; details &rarr;</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Photo 3: Soil Erosion Bunds -->
+        <article class="gallery-card" data-category="soil">
+          <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Soil Erosion Control Bunds photo">
+            <img class="gallery-img" src="photos/soil-erosion-bunds.jpeg" alt="Soil Erosion Control Bunds (Caratuurka) in Beledweyne" loading="lazy">
+            <span class="gallery-expand-hint">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              Click to view
+            </span>
+          </div>
+          <div class="gallery-content">
+            <div class="gallery-meta">
+              <span class="gallery-badge">Soil Conservation</span>
+              <span class="gallery-date">Beledweyne &bull; Hiran</span>
+            </div>
+            <h3 class="gallery-title">Soil Erosion Control Bunds (Caratuurka)</h3>
+            <p class="gallery-desc">Mechanical contour earth bunding and land terracing across expansive agricultural acreage in Beledweyne. These earthwork structures arrest seasonal stormwater runoff, prevent valuable topsoil loss, and increase in-situ soil moisture retention for rainfed and irrigated crop cycles.</p>
+            <div class="gallery-footer-action">
+              <button class="gallery-view-btn" data-action="open-modal">View photo &amp; details &rarr;</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Photo 4: Rice Crop Trials -->
+        <article class="gallery-card" data-category="agriculture">
+          <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Irrigated Rice Crop Diversification Trials photo">
+            <img class="gallery-img" src="photos/rice-cultivation-trials.jpeg" alt="Irrigated Rice Crop Diversification Trials in Habaasweyne" loading="lazy">
+            <span class="gallery-expand-hint">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              Click to view
+            </span>
+          </div>
+          <div class="gallery-content">
+            <div class="gallery-meta">
+              <span class="gallery-badge">Agriculture</span>
+              <span class="gallery-date">Experimental Plot</span>
+            </div>
+            <h3 class="gallery-title">Irrigated Rice Cultivation &amp; Crop Diversification</h3>
+            <p class="gallery-desc">Field trials evaluating high-performance cereal and rice varieties grown under regulated furrow and basin irrigation. Demonstrates the viability of diversifying staples beyond traditional sorghum and maize, dramatically improving household food security and agricultural resilience.</p>
+            <div class="gallery-footer-action">
+              <button class="gallery-view-btn" data-action="open-modal">View photo &amp; details &rarr;</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Photo 5: Beekeeping Equipment -->
+        <article class="gallery-card" data-category="livelihoods">
+          <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Beekeeping &amp; Honey Production Equipment photo">
+            <img class="gallery-img" src="photos/beekeeping-equipment.jpeg" alt="Beekeeping &amp; Honey Production Equipment in Hiran" loading="lazy">
+            <span class="gallery-expand-hint">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              Click to view
+            </span>
+          </div>
+          <div class="gallery-content">
+            <div class="gallery-meta">
+              <span class="gallery-badge">Livelihoods</span>
+              <span class="gallery-date">Habaasweyne Village</span>
+            </div>
+            <h3 class="gallery-title">Beekeeping &amp; Honey Production Livelihood Kit</h3>
+            <p class="gallery-desc">Provision of modern apiculture equipment kits, including multi-tier Langstroth wooden hives, stainless steel smokers, protective suits, and food-grade packaging containers. Designed to equip local agro-pastoralist families with alternative, high-value honey income streams.</p>
+            <div class="gallery-footer-action">
+              <button class="gallery-view-btn" data-action="open-modal">View photo &amp; details &rarr;</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Photo 6: Field Monitoring & Agronomic Trials -->
+        <article class="gallery-card" data-category="agriculture">
+          <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Field Monitoring &amp; GPS Agronomic Trials photo">
+            <img class="gallery-img" src="photos/crop-monitoring-field.jpeg" alt="GPS Agronomic Field Monitoring in Beledweyne" loading="lazy">
+            <span class="gallery-expand-hint">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              Click to view
+            </span>
+          </div>
+          <div class="gallery-content">
+            <div class="gallery-meta">
+              <span class="gallery-badge">Agriculture</span>
+              <span class="gallery-date">Beledweyne &bull; Hiran</span>
+            </div>
+            <h3 class="gallery-title">Field Monitoring &amp; GPS Agronomic Trials</h3>
+            <p class="gallery-desc">GPS-tagged field monitoring and data logging of crop emergence and vegetative health in irrigated demonstration plots. Rigorous data collection provides empirical evidence for agricultural extension workers and community farmer associations.</p>
+            <div class="gallery-footer-action">
+              <button class="gallery-view-btn" data-action="open-modal">View photo &amp; details &rarr;</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Photo 7: Canal Operations & Technical Inspection -->
+        <article class="gallery-card" data-category="irrigation">
+          <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Canal Operations &amp; Technical Inspection photo">
+            <img class="gallery-img" src="photos/water-canal-headworks.jpeg" alt="Canal Operations &amp; Technical Inspection in Hiran" loading="lazy">
+            <span class="gallery-expand-hint">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              Click to view
+            </span>
+          </div>
+          <div class="gallery-content">
+            <div class="gallery-meta">
+              <span class="gallery-badge">Irrigation &amp; Water</span>
+              <span class="gallery-date">Infrastructure Review</span>
+            </div>
+            <h3 class="gallery-title">Canal Operations &amp; Technical Field Inspection</h3>
+            <p class="gallery-desc">On-site technical review of the canal water flow rate, embankment stability, and pump intake discharge pressure. Verified that operational parameters match project design benchmarks to safeguard uninterrupted crop irrigation during peak dry periods.</p>
+            <div class="gallery-footer-action">
+              <button class="gallery-view-btn" data-action="open-modal">View photo &amp; details &rarr;</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- User Information Box for adding more photos -->
+      <div style="margin-top: 3.5rem; padding: 1.5rem 2rem; background: var(--surface); border: 1px dashed var(--line); border-radius: 14px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <h4 style="margin-bottom: 0.25rem;">Want to add more photos?</h4>
+          <p style="color: var(--muted); font-size: 0.95rem;">You can transfer any additional photos directly into the <code>photos/</code> folder. They are ready to display on this page or across any section of the website.</p>
+        </div>
+        <a href="contact.html" class="btn sm">Consult With Our Team</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section style="padding-top: 0;">
+    <div class="wrap">
+      <div class="cta-banner">
+        <svg class="contours" viewBox="0 0 600 500" aria-hidden="true" focusable="false">
+          <path d="M40 260C60 140 190 40 330 70c110 24 180 110 150 200-20 60-80 70-110 120-30 50-110 90-190 60C90 420 30 340 40 260Z"/>
+          <path d="M85 262c18-100 120-170 235-150 90 16 140 86 118 154-16 48-64 60-90 102-26 42-92 70-150 48-70-26-125-92-113-154Z"/>
+        </svg>
+        <h2>Need evidence-based clarity for your organisation?</h2>
+        <p class="lead" style="color: var(--on-deep); opacity: 0.9; max-width: 52ch;">We pair rigorous analysis with practical advisory you can execute with confidence.</p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 0.5rem;">
+          <a class="btn" href="contact.html">Book a consultation</a>
+          <a class="btn ghost" style="color: var(--on-deep); border-color: var(--on-deep);" href="services.html">Explore our services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Lightbox Modal -->
+<div class="modal-backdrop" id="galleryModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-window">
+    <button class="modal-close" aria-label="Close photo view">&times;</button>
+    <div class="modal-img-wrap">
+      <img class="modal-img" src="" alt="Enlarged gallery photo">
+    </div>
+    <div class="modal-body">
+      <div style="display: flex; gap: 0.75rem; align-items: center;">
+        <span class="gallery-badge modal-badge"></span>
+      </div>
+      <h2 class="modal-title" style="font-size: 1.5rem;"></h2>
+      <p class="modal-desc" style="color: var(--muted); font-size: 1rem; line-height: 1.6;"></p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">Peninsula Insights</a>
+        <p>A strategic consultancy helping leadership teams, institutions, and growing businesses make clear, well-evidenced decisions.</p>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 0.85rem;">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a class="active" href="gallery.html">Gallery &amp; Photos</a></li>
+          <li><a href="contact.html">Book a Consultation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 0.85rem;">Get in touch</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:info@peninsulainsights.com">info@peninsulainsights.com</a></li>
+          <li><span>Two working days reply</span></li>
+          <li><a href="contact.html">Consultation Request &rarr;</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span class="dynamic-yr">2026</span> Peninsula Insights. All rights reserved.</span>
+      <span>peninsulainsights.com</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
