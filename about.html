@@ -15,13 +15,16 @@
 <header>
   <div class="wrap bar">
     <a class="brand" href="index.html">
-      <img src="photos/logo.png" alt="Peninsula Insights Consulting Logo" class="brand-logo">
+      <img src="photos/logo-mark.png" alt="Peninsula Insights Consulting" class="brand-mark">
       <div class="brand-text-wrap">
         <span class="brand-title">Peninsula Insights</span>
         <span class="brand-sub">Consulting</span>
       </div>
     </a>
-    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <span>Menu</span>
+    </button>
     <nav id="nav" aria-label="Main">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -37,10 +40,6 @@
 <main>
   <!-- Page Header -->
   <section class="page-hero">
-    <svg class="contours" viewBox="0 0 600 500" aria-hidden="true" focusable="false">
-      <path d="M40 260C60 140 190 40 330 70c110 24 180 110 150 200-20 60-80 70-110 120-30 50-110 90-190 60C90 420 30 340 40 260Z"/>
-      <path d="M85 262c18-100 120-170 235-150 90 16 140 86 118 154-16 48-64 60-90 102-26 42-92 70-150 48-70-26-125-92-113-154Z"/>
-    </svg>
     <div class="wrap">
       <span class="page-tag">Company Profile &bull; Established 15 July 2021</span>
       <h1>About Peninsula Insights Consulting</h1>
@@ -57,10 +56,10 @@
         <p class="lead" style="font-size: 1.05rem; line-height: 1.7; margin-top: 0.75rem;">
           Peninsula Insights Consulting is a development-focused consultancy established on 15 July 2021. We partner with non-governmental organizations, United Nations and donor-funded programmes, academic institutions, and public-sector actors to turn evidence, ideas, and field experience into practical solutions that improve programmes, strengthen systems, and sustain change.
         </p>
-        <p style="color: var(--muted); margin-top: 1rem; line-height: 1.7;">
+        <p style="color: var(--ink-secondary); margin-top: 1rem; line-height: 1.7;">
           Rooted in the realities of Somalia and the wider Sub-Saharan African context, we bring together multidisciplinary expertise in research and evaluation, strategy, programme quality, public health and nutrition, WASH, climate resilience, agriculture, and social development. We listen first, work alongside our clients, and shape every assignment around the people, places, and objectives it is meant to serve.
         </p>
-        <p style="color: var(--muted); margin-top: 1rem; line-height: 1.7;">
+        <p style="color: var(--ink-secondary); margin-top: 1rem; line-height: 1.7;">
           For us, good consultancy is more than a report. It means asking the right questions, making complex issues understandable, building local capacity, and helping people use evidence to make better decisions—in fragile, drought-affected, and fast-changing settings as much as in stable ones.
         </p>
 
@@ -83,7 +82,7 @@
 
       <!-- What Guides Our Work (Values) -->
       <div class="principles">
-        <h3 style="font-family: var(--serif); font-size: 1.6rem; margin-bottom: 0.5rem;">What Guides Our Work</h3>
+        <h3 style="font-family: var(--serif); font-size: 1.5rem; margin-bottom: 0.5rem;">What Guides Our Work</h3>
         <div>
           <h3>Integrity and Independence</h3>
           <p>We act honestly, protect information responsibly, and report findings objectively, fairly, and with care.</p>
@@ -113,7 +112,7 @@
   </section>
 
   <!-- What Clients Can Expect -->
-  <section style="background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+  <section class="section-soft">
     <div class="wrap">
       <div class="head">
         <span class="gallery-badge">Client Commitment</span>
@@ -122,29 +121,29 @@
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 1.5rem;">
-        <div style="background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 1.6rem;">
-          <h4 style="margin-bottom: 0.5rem; color: var(--ink);">Clear and agreed deliverables</h4>
-          <p style="color: var(--muted); font-size: 0.95rem;">A shared understanding of the scope, timelines, responsibilities, and outputs from the outset.</p>
+        <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1.5rem; box-shadow: var(--card-shadow);">
+          <h4 style="margin-bottom: 0.45rem; color: var(--ink);">Clear and agreed deliverables</h4>
+          <p style="color: var(--muted); font-size: 0.94rem;">A shared understanding of the scope, timelines, responsibilities, and outputs from the outset.</p>
         </div>
 
-        <div style="background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 1.6rem;">
-          <h4 style="margin-bottom: 0.5rem; color: var(--ink);">Context-sensitive solutions</h4>
-          <p style="color: var(--muted); font-size: 0.95rem;">Recommendations that authentically reflect local conditions, capacities, risks, and institutional opportunities.</p>
+        <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1.5rem; box-shadow: var(--card-shadow);">
+          <h4 style="margin-bottom: 0.45rem; color: var(--ink);">Context-sensitive solutions</h4>
+          <p style="color: var(--muted); font-size: 0.94rem;">Recommendations that authentically reflect local conditions, capacities, risks, and institutional opportunities.</p>
         </div>
 
-        <div style="background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 1.6rem;">
-          <h4 style="margin-bottom: 0.5rem; color: var(--ink);">Useful, triangulated evidence</h4>
-          <p style="color: var(--muted); font-size: 0.95rem;">Findings presented clearly, triangulated across diverse sources, and linked directly to practical implications for decision-making.</p>
+        <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1.5rem; box-shadow: var(--card-shadow);">
+          <h4 style="margin-bottom: 0.45rem; color: var(--ink);">Useful, triangulated evidence</h4>
+          <p style="color: var(--muted); font-size: 0.94rem;">Findings presented clearly, triangulated across diverse sources, and linked directly to practical implications for decision-making.</p>
         </div>
 
-        <div style="background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 1.6rem;">
-          <h4 style="margin-bottom: 0.5rem; color: var(--ink);">Respectful engagement</h4>
-          <p style="color: var(--muted); font-size: 0.95rem;">Meaningful consultation and strict attention to confidentiality, informed consent, safeguarding, and inclusion.</p>
+        <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1.5rem; box-shadow: var(--card-shadow);">
+          <h4 style="margin-bottom: 0.45rem; color: var(--ink);">Respectful engagement</h4>
+          <p style="color: var(--muted); font-size: 0.94rem;">Meaningful consultation and strict attention to confidentiality, informed consent, safeguarding, and inclusion.</p>
         </div>
 
-        <div style="background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 1.6rem;">
-          <h4 style="margin-bottom: 0.5rem; color: var(--ink);">Capacity that remains</h4>
-          <p style="color: var(--muted); font-size: 0.95rem;">Where relevant, tools, coaching, and knowledge transfer that empower internal teams to continue the work beyond the assignment.</p>
+        <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1.5rem; box-shadow: var(--card-shadow);">
+          <h4 style="margin-bottom: 0.45rem; color: var(--ink);">Capacity that remains</h4>
+          <p style="color: var(--muted); font-size: 0.94rem;">Where relevant, tools, coaching, and knowledge transfer that empower internal teams to continue the work beyond the assignment.</p>
         </div>
       </div>
     </div>
@@ -163,123 +162,126 @@
 
         <!-- Work 1 -->
         <article class="work-card">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; flex-wrap: wrap;">
             <span class="work-client">World Vision Somalia</span>
             <span class="work-dates">July 2026 – Present</span>
           </div>
           <h4>Health System Responsiveness Assessment (REACTS-IN Programme)</h4>
-          <p style="color: var(--muted); font-size: 0.95rem;">A mixed-methods assessment of gender-equitable nutrition, health, and SRHR services built on WHO Health System Building Blocks, WHO Health System Responsiveness Framework, and Gender Responsive Assessment Scale (GRAS), involving the Federal Ministry of Health, District Health Management Teams, and community health workers.</p>
+          <p style="color: var(--muted); font-size: 0.94rem;">A mixed-methods assessment of gender-equitable nutrition, health, and SRHR services built on WHO Health System Building Blocks, WHO Health System Responsiveness Framework, and Gender Responsive Assessment Scale (GRAS), involving the Federal Ministry of Health, District Health Management Teams, and community health workers.</p>
         </article>
 
         <!-- Work 2 -->
         <article class="work-card">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; flex-wrap: wrap;">
             <span class="work-client">Welthungerhilfe &amp; TASCO</span>
             <span class="work-dates">April – June 2026</span>
           </div>
           <h4>Endline Evaluation: Water Supply Systems Sustainability (SOM1054)</h4>
-          <p style="color: var(--muted); font-size: 0.95rem;">Assessed the Water Systems Strengthening approach in Awdal Region, Somaliland, against OECD-DAC criteria and Theory of Change using household surveys, KIIs, FGDs, and infrastructure observation, documenting safe-water gains and women's participation in water governance.</p>
+          <p style="color: var(--muted); font-size: 0.94rem;">Assessed the Water Systems Strengthening approach in Awdal Region, Somaliland, against OECD-DAC criteria and Theory of Change using household surveys, KIIs, FGDs, and infrastructure observation, documenting safe-water gains and women's participation in water governance.</p>
         </article>
 
         <!-- Work 3 -->
         <article class="work-card">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; flex-wrap: wrap;">
             <span class="work-client">Welthungerhilfe</span>
             <span class="work-dates">March – June 2026</span>
           </div>
           <h4>Midterm Evaluation: Multi-Sector Resilience, WASH &amp; NRM</h4>
-          <p style="color: var(--muted); font-size: 0.95rem;">Evaluation across Hiiraan and Galgaduud (South-Central Somalia) and Sool and Togdheer (Somaliland). Combined household surveys, KIIs, and Most Significant Change stories to assess climate-smart agriculture, value chains, and community resilience.</p>
+          <p style="color: var(--muted); font-size: 0.94rem;">Evaluation across Hiiraan and Galgaduud (South-Central Somalia) and Sool and Togdheer (Somaliland). Combined household surveys, KIIs, and Most Significant Change stories to assess climate-smart agriculture, value chains, and community resilience.</p>
         </article>
 
         <!-- Work 4 -->
         <article class="work-card">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; flex-wrap: wrap;">
             <span class="work-client">GREDO &amp; Welthungerhilfe</span>
             <span class="work-dates">March – May 2025</span>
           </div>
           <h4>Endline Evaluation: Nutrition in Emergencies (Baidoa District)</h4>
-          <p style="color: var(--muted); font-size: 0.95rem;">Evaluated emergency nutrition interventions in Baidoa District, Bay Region. Analyzed CMAM performance against SPHERE standards, compared baseline and endline results, and documented major gains in infant and young child feeding (IYCF) practices.</p>
+          <p style="color: var(--muted); font-size: 0.94rem;">Evaluated emergency nutrition interventions in Baidoa District, Bay Region. Analyzed CMAM performance against SPHERE standards, compared baseline and endline results, and documented major gains in infant and young child feeding (IYCF) practices.</p>
         </article>
 
         <!-- Work 5 -->
         <article class="work-card">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; flex-wrap: wrap;">
             <span class="work-client">Welthungerhilfe Somaliland</span>
             <span class="work-dates">2023</span>
           </div>
           <h4>Baseline Evaluation: Women's Empowerment &amp; Maternal Nutrition</h4>
-          <p style="color: var(--muted); font-size: 0.95rem;">Designed survey methodology, trained enumerators on data protection and research ethics, supervised field data collection across Maroodi-Jeex and Togdheer, and led the multi-stakeholder validation workshop with the Ministry of Health Development.</p>
+          <p style="color: var(--muted); font-size: 0.94rem;">Designed survey methodology, trained enumerators on data protection and research ethics, supervised field data collection across Maroodi-Jeex and Togdheer, and led the multi-stakeholder validation workshop with the Ministry of Health Development.</p>
         </article>
 
         <!-- Work 6 -->
         <article class="work-card">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; flex-wrap: wrap;">
             <span class="work-client">Finnish Somalia Network (FSN)</span>
             <span class="work-dates">Sept – Oct 2022</span>
           </div>
           <h4>Endline Evaluation: Hiil Hooyo Maternal Healthcare Project</h4>
-          <p style="color: var(--muted); font-size: 0.95rem;">Rigorous evaluation of maternal healthcare services in Somaliland and Puntland, producing actionable evidence to improve maternal and child health facility outcomes.</p>
+          <p style="color: var(--muted); font-size: 0.94rem;">Rigorous evaluation of maternal healthcare services in Somaliland and Puntland, producing actionable evidence to improve maternal and child health facility outcomes.</p>
         </article>
 
         <!-- Work 7 -->
         <article class="work-card">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; flex-wrap: wrap;">
             <span class="work-client">AMREF Kenya</span>
             <span class="work-dates">2023 – 2024</span>
           </div>
           <h4>Community &amp; Facility Malaria Research Assessment</h4>
-          <p style="color: var(--muted); font-size: 0.95rem;">Western Kenya: reviewed a decade of facility malaria records, assessed health worker service quality and client satisfaction, and supported rollout of a surveillance system for essential medicines.</p>
+          <p style="color: var(--muted); font-size: 0.94rem;">Western Kenya: reviewed a decade of facility malaria records, assessed health worker service quality and client satisfaction, and supported rollout of a surveillance system for essential medicines.</p>
         </article>
 
         <!-- Work 8 -->
         <article class="work-card">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; flex-wrap: wrap;">
             <span class="work-client">Sanisphere Limited</span>
             <span class="work-dates">2019 – 2024</span>
           </div>
           <h4>Pharmaceutical Services &amp; Healthcare Monitoring</h4>
-          <p style="color: var(--muted); font-size: 0.95rem;">Longitudinal pharmaceutical service delivery, market analysis, and customer-satisfaction tracking across lead pharmacies in Kenya and Uganda.</p>
+          <p style="color: var(--muted); font-size: 0.94rem;">Longitudinal pharmaceutical service delivery, market analysis, and customer-satisfaction tracking across lead pharmacies in Kenya and Uganda.</p>
         </article>
 
       </div>
     </div>
   </section>
 
-  <!-- Visual Field Archive Teaser -->
-  <section class="deep">
+  <!-- Visual Field Archive Teaser (Light cards) -->
+  <section class="section-soft">
     <div class="wrap">
       <div class="head">
         <h2>Evidence from the Field</h2>
         <p class="lead">View authentic field photography documenting our assessments, solar irrigation installations, and community consultations.</p>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr)); gap: 1.5rem; margin-top: 2rem;">
-        <div style="background: color-mix(in srgb, var(--surface) 10%, transparent); border: 1px solid color-mix(in srgb, var(--on-deep) 15%, transparent); border-radius: 14px; overflow: hidden;">
+        <div class="gallery-card">
           <img src="photos/solar-irrigation-system.jpeg" alt="Solar irrigation installation" style="width: 100%; aspect-ratio: 16/10; object-fit: cover;">
-          <div style="padding: 1.25rem;">
-            <h4 style="color: var(--on-deep); margin-bottom: 0.35rem;">Solar Pumping Systems</h4>
-            <p style="font-size: 0.95rem;">Renewable infrastructure powering high-volume irrigation canals in Hiran.</p>
+          <div style="padding: 1.35rem;">
+            <span class="gallery-badge" style="margin-bottom: 0.4rem;">Solar Infrastructure</span>
+            <h4 style="margin-bottom: 0.35rem; margin-top: 0.4rem;">Solar Pumping Systems</h4>
+            <p style="font-size: 0.94rem; color: var(--muted);">Renewable infrastructure powering high-volume irrigation canals in Hiran.</p>
           </div>
         </div>
 
-        <div style="background: color-mix(in srgb, var(--surface) 10%, transparent); border: 1px solid color-mix(in srgb, var(--on-deep) 15%, transparent); border-radius: 14px; overflow: hidden;">
+        <div class="gallery-card">
           <img src="photos/soil-erosion-bunds.jpeg" alt="Soil erosion bunds" style="width: 100%; aspect-ratio: 16/10; object-fit: cover;">
-          <div style="padding: 1.25rem;">
-            <h4 style="color: var(--on-deep); margin-bottom: 0.35rem;">Soil Conservation (Caratuurka)</h4>
-            <p style="font-size: 0.95rem;">Contour earth bunding protecting farmland against runoff in Beledweyne.</p>
+          <div style="padding: 1.35rem;">
+            <span class="gallery-badge" style="margin-bottom: 0.4rem;">Soil Conservation</span>
+            <h4 style="margin-bottom: 0.35rem; margin-top: 0.4rem;">Soil Conservation (Caratuurka)</h4>
+            <p style="font-size: 0.94rem; color: var(--muted);">Contour earth bunding protecting farmland against runoff in Beledweyne.</p>
           </div>
         </div>
 
-        <div style="background: color-mix(in srgb, var(--surface) 10%, transparent); border: 1px solid color-mix(in srgb, var(--on-deep) 15%, transparent); border-radius: 14px; overflow: hidden;">
+        <div class="gallery-card">
           <img src="photos/beekeeping-equipment.jpeg" alt="Beekeeping equipment distribution" style="width: 100%; aspect-ratio: 16/10; object-fit: cover;">
-          <div style="padding: 1.25rem;">
-            <h4 style="color: var(--on-deep); margin-bottom: 0.35rem;">Livelihood Diversification</h4>
-            <p style="font-size: 0.95rem;">Modern apiculture and honey production equipment for vulnerable households.</p>
+          <div style="padding: 1.35rem;">
+            <span class="gallery-badge" style="margin-bottom: 0.4rem;">Livelihoods</span>
+            <h4 style="margin-bottom: 0.35rem; margin-top: 0.4rem;">Livelihood Diversification</h4>
+            <p style="font-size: 0.94rem; color: var(--muted);">Modern apiculture and honey production equipment for vulnerable households.</p>
           </div>
         </div>
       </div>
 
       <div style="margin-top: 2.5rem; text-align: center;">
-        <a href="gallery.html" class="btn" style="background: var(--accent); color: var(--accent-ink);">Explore all field photos &amp; case studies &rarr;</a>
+        <a href="gallery.html" class="btn">Explore all field photos &amp; case studies &rarr;</a>
       </div>
     </div>
   </section>
@@ -289,7 +291,7 @@
     <div class="wrap">
       <div class="cta-banner">
         <h2>Partner with Peninsula Insights Consulting</h2>
-        <p class="lead" style="color: var(--on-deep); opacity: 0.9;">We are committed to growing as a trusted consultancy partner in Somalia and across Africa. Let us discuss how we can support your next evaluation, strategic plan, or research assignment.</p>
+        <p class="lead">We are committed to growing as a trusted consultancy partner in Somalia and across Africa. Let us discuss how we can support your next evaluation, strategic plan, or research assignment.</p>
         <a class="btn" href="contact.html">Book a consultation</a>
       </div>
     </div>
@@ -301,14 +303,14 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a class="brand" href="index.html">
-          <img src="photos/logo.png" alt="Peninsula Insights Consulting" style="height: 38px; border-radius: 6px;">
+          <img src="photos/logo-mark.png" alt="Peninsula Insights Consulting" class="brand-mark">
           <div class="brand-text-wrap">
             <span class="brand-title">Peninsula Insights</span>
             <span class="brand-sub">Consulting</span>
           </div>
         </a>
         <p style="margin-top: 0.75rem;">Established 15 July 2021 | Somalia &amp; Beyond. Research &bull; Strategy &bull; Resilience &bull; Programme Quality.</p>
-        <p style="font-size: 0.88rem; color: var(--accent); font-weight: 500;">Empowering Change, Driving Success</p>
+        <p style="font-size: 0.88rem; color: var(--accent); font-weight: 600;">Empowering Change, Driving Success</p>
       </div>
       <div>
         <h4 style="margin-bottom: 0.85rem;">Navigation</h4>

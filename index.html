@@ -15,13 +15,16 @@
 <header>
   <div class="wrap bar">
     <a class="brand" href="index.html">
-      <img src="photos/logo.png" alt="Peninsula Insights Consulting Logo" class="brand-logo">
+      <img src="photos/logo-mark.png" alt="Peninsula Insights Consulting" class="brand-mark">
       <div class="brand-text-wrap">
         <span class="brand-title">Peninsula Insights</span>
         <span class="brand-sub">Consulting</span>
       </div>
     </a>
-    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <span>Menu</span>
+    </button>
     <nav id="nav" aria-label="Main">
       <ul>
         <li><a class="active" href="index.html">Home</a></li>
@@ -37,28 +40,26 @@
 <main id="top">
   <!-- Hero Section -->
   <div class="hero">
-    <svg class="contours draw" viewBox="0 0 600 500" aria-hidden="true" focusable="false">
+    <svg class="contours" viewBox="0 0 600 500" aria-hidden="true" focusable="false">
       <path d="M40 260C60 140 190 40 330 70c110 24 180 110 150 200-20 60-80 70-110 120-30 50-110 90-190 60C90 420 30 340 40 260Z"/>
       <path d="M85 262c18-100 120-170 235-150 90 16 140 86 118 154-16 48-64 60-90 102-26 42-92 70-150 48-70-26-125-92-113-154Z"/>
       <path d="M130 264c14-70 84-116 170-104 66 10 98 60 82 108-12 36-48 46-68 80-20 32-70 50-110 34-54-22-84-70-74-118Z"/>
-      <path d="M175 266c10-40 52-66 108-58 40 6 58 38 48 66-8 22-30 30-44 50-14 20-46 30-70 20-34-14-52-48-42-78Z"/>
-      <path d="M218 268c6-18 26-30 54-26 20 4 28 20 22 34-6 12-16 16-24 26-8 10-24 14-36 8-16-8-22-24-16-42Z"/>
     </svg>
     <div class="wrap">
-      <div class="hero-line">
-        <span class="gallery-badge" style="font-size: 0.85rem; padding: 0.35rem 0.9rem;">Established 15 July 2021 &bull; Somalia &amp; Beyond</span>
+      <div>
+        <span class="gallery-badge" style="font-size: 0.82rem; padding: 0.35rem 0.85rem;">Established 15 July 2021 &bull; Somalia &amp; Beyond</span>
       </div>
-      <h1 class="hero-line" style="margin-top: 0.5rem;">Empowering change, driving success.</h1>
-      <p class="lead hero-line" style="animation-delay:.12s">
+      <h1>Empowering change, driving success.</h1>
+      <p class="lead">
         Peninsula Insights Consulting partners with NGOs, UN agencies, donor programmes, academic bodies, and public-sector actors to turn evidence, ideas, and field experience into practical solutions that improve programmes, strengthen systems, and sustain change.
       </p>
-      <div class="pillars-bar hero-line" style="animation-delay:.18s">
+      <div class="pillars-bar">
         <span class="pillar-item">Research &amp; MEAL</span>
         <span class="pillar-item">Strategy</span>
         <span class="pillar-item">Climate Resilience</span>
         <span class="pillar-item">Programme Quality</span>
       </div>
-      <div class="hero-actions hero-line" style="animation-delay:.24s">
+      <div class="hero-actions">
         <a class="btn" href="contact.html">Book a consultation</a>
         <a class="btn ghost" href="gallery.html">View field photos</a>
       </div>
@@ -68,7 +69,7 @@
   <!-- Partners & Collaborations Strip -->
   <section class="partners-strip">
     <div class="wrap partners-wrap">
-      <span class="partners-label">Experience &amp; Engagements With:</span>
+      <span class="partners-label">Experience &amp; Engagements:</span>
       <div class="partner-names">
         <span class="partner-tag">World Vision Somalia</span>
         <span class="partner-tag">Welthungerhilfe</span>
@@ -115,7 +116,7 @@
       </div>
 
       <!-- Additional 3 highlights -->
-      <div class="services" style="border-top: 1px solid var(--line); margin-top: 2rem;">
+      <div class="services" style="margin-top: 1.75rem;">
         <article class="service">
           <span class="gallery-badge" style="width: fit-content;">04</span>
           <h3>Agriculture, Livelihoods &amp; Value Chains</h3>
@@ -132,7 +133,7 @@
 
         <article class="service">
           <span class="gallery-badge" style="width: fit-content;">06</span>
-          <h3>Thematic Support: WASH, Health, Nutrition &amp; Education</h3>
+          <h3>Thematic Support: WASH, Health &amp; Education</h3>
           <p>Health systems strengthening, CMAM/IYCF nutrition surveys, water supply sustainability, child protection, and capacity building.</p>
           <a class="service-link" href="services.html#thematic">Explore Thematic practice &rarr;</a>
         </article>
@@ -146,9 +147,9 @@
   </section>
 
   <!-- FEATURED PHOTOS & CASE DESCRIPTIONS SECTION -->
-  <section id="photos" style="background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+  <section id="photos" class="section-soft">
     <div class="wrap">
-      <div class="head" style="display: flex; flex-direction: column; gap: 0.75rem;">
+      <div class="head">
         <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
           <div>
             <span class="gallery-badge" style="margin-bottom: 0.5rem;">Visual Archive &bull; Somalia</span>
@@ -160,7 +161,7 @@
       </div>
 
       <!-- Featured Photo Grid (3 items from user uploads) -->
-      <div class="gallery-grid" style="margin-top: 1.5rem;">
+      <div class="gallery-grid">
         
         <!-- Featured Photo 1: Solar System -->
         <article class="gallery-card" data-category="solar">
@@ -238,41 +239,41 @@
   </section>
 
   <!-- How We Work (5 steps from Company Profile) -->
-  <section id="approach" class="deep">
+  <section id="approach">
     <div class="wrap">
       <div class="head">
-        <span class="gallery-badge" style="background: color-mix(in srgb, var(--accent) 25%, transparent);">Our Methodology</span>
+        <span class="gallery-badge">Our Methodology</span>
         <h2>How We Work</h2>
         <p class="lead">Every assignment begins with understanding the context, the client's questions, and what success looks like. We keep clients involved from inception to validation.</p>
       </div>
       <ol class="steps">
         <li>
           <div>
-            <h3>1. Listen and Understand</h3>
+            <h3>Listen and Understand</h3>
             <p>We consult clients and relevant stakeholders, clarify underlying needs, and recognize essential local knowledge and context.</p>
           </div>
         </li>
         <li>
           <div>
-            <h3>2. Design with Purpose</h3>
+            <h3>Design with Purpose</h3>
             <p>We develop a realistic methodology, sampling strategy, workplan, and deliverables that respond directly to the Terms of Reference.</p>
           </div>
         </li>
         <li>
           <div>
-            <h3>3. Deliver with Care</h3>
+            <h3>Deliver with Care</h3>
             <p>We apply sound research methods, rigorous data quality checks, ethical research practice, safeguarding, and transparent communication.</p>
           </div>
         </li>
         <li>
           <div>
-            <h3>4. Share and Strengthen</h3>
+            <h3>Share and Strengthen</h3>
             <p>We present findings in accessible formats, facilitate validation and reflection workshops, and help teams operationalize recommendations.</p>
           </div>
         </li>
         <li>
           <div>
-            <h3>5. Learn and Improve</h3>
+            <h3>Learn and Improve</h3>
             <p>We welcome feedback and use it systematically to strengthen the quality and long-term usefulness of our collective work.</p>
           </div>
         </li>
@@ -281,7 +282,7 @@
   </section>
 
   <!-- Why Peninsula Insights Consulting -->
-  <section id="about">
+  <section id="about" class="section-soft">
     <div class="wrap about">
       <div class="head" style="margin:0">
         <span class="gallery-badge">Our Advantage</span>
@@ -330,7 +331,7 @@
   </section>
 
   <!-- Consultation Banner Section -->
-  <section id="consult" style="background:var(--surface);border-top:1px solid var(--line)">
+  <section id="consult">
     <div class="wrap book">
       <div>
         <span class="gallery-badge" style="margin-bottom: 0.5rem;">Let's Collaborate</span>
@@ -409,8 +410,8 @@
       <div style="display: flex; gap: 0.75rem; align-items: center;">
         <span class="gallery-badge modal-badge"></span>
       </div>
-      <h2 class="modal-title" style="font-size: 1.5rem;"></h2>
-      <p class="modal-desc" style="color: var(--muted); font-size: 1rem; line-height: 1.6;"></p>
+      <h2 class="modal-title" style="font-size: 1.4rem;"></h2>
+      <p class="modal-desc" style="color: var(--muted); font-size: 0.98rem; line-height: 1.6;"></p>
     </div>
   </div>
 </div>
@@ -420,14 +421,14 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a class="brand" href="index.html">
-          <img src="photos/logo.png" alt="Peninsula Insights Consulting" style="height: 38px; border-radius: 6px;">
+          <img src="photos/logo-mark.png" alt="Peninsula Insights Consulting" class="brand-mark">
           <div class="brand-text-wrap">
             <span class="brand-title">Peninsula Insights</span>
             <span class="brand-sub">Consulting</span>
           </div>
         </a>
         <p style="margin-top: 0.75rem;">Established 15 July 2021 | Somalia &amp; Beyond. Research &bull; Strategy &bull; Resilience &bull; Programme Quality.</p>
-        <p style="font-size: 0.88rem; color: var(--accent); font-weight: 500;">Empowering Change, Driving Success</p>
+        <p style="font-size: 0.88rem; color: var(--accent); font-weight: 600;">Empowering Change, Driving Success</p>
       </div>
       <div>
         <h4 style="margin-bottom: 0.85rem;">Navigation</h4>

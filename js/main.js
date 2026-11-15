@@ -9,25 +9,32 @@
   var nav = document.getElementById('nav');
 
   if (btn && nav) {
+    var updateBtnText = function(isOpen) {
+      btn.setAttribute('aria-expanded', isOpen);
+      var span = btn.querySelector('span');
+      if (span) {
+        span.textContent = isOpen ? 'Close' : 'Menu';
+      } else {
+        btn.textContent = isOpen ? 'Close' : 'Menu';
+      }
+    };
+
     btn.addEventListener('click', function() {
       var isOpen = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', isOpen);
-      btn.textContent = isOpen ? 'Close' : 'Menu';
+      updateBtnText(isOpen);
     });
 
     nav.addEventListener('click', function(e) {
       if (e.target.tagName === 'A') {
         nav.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-        btn.textContent = 'Menu';
+        updateBtnText(false);
       }
     });
 
     document.addEventListener('click', function(e) {
       if (!nav.contains(e.target) && !btn.contains(e.target) && nav.classList.contains('open')) {
         nav.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-        btn.textContent = 'Menu';
+        updateBtnText(false);
       }
     });
   }
