@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Book a Consultation | Peninsula Insights</title>
-  <meta name="description" content="Schedule a strategic consultation with Peninsula Insights. Confidential advisory for leadership teams and institutions.">
+  <title>Contact &amp; Book a Consultation | Peninsula Insights Consulting</title>
+  <meta name="description" content="Contact Peninsula Insights Consulting. Discuss evaluations, strategic planning, climate resilience, and programme quality across Somalia and beyond.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,14 +14,20 @@
 
 <header>
   <div class="wrap bar">
-    <a class="brand" href="index.html">Peninsula Insights</a>
+    <a class="brand" href="index.html">
+      <img src="photos/logo.png" alt="Peninsula Insights Consulting Logo" class="brand-logo">
+      <div class="brand-text-wrap">
+        <span class="brand-title">Peninsula Insights</span>
+        <span class="brand-sub">Consulting</span>
+      </div>
+    </a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" aria-label="Main">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="services.html">Services &amp; Expertise</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="gallery.html">Field Photos &amp; Projects</a></li>
         <li><a class="btn active" href="contact.html">Book a consultation</a></li>
       </ul>
     </nav>
@@ -36,9 +42,9 @@
       <path d="M85 262c18-100 120-170 235-150 90 16 140 86 118 154-16 48-64 60-90 102-26 42-92 70-150 48-70-26-125-92-113-154Z"/>
     </svg>
     <div class="wrap">
-      <span class="page-tag">Direct Consultation</span>
+      <span class="page-tag">Consultation &amp; Partnerships</span>
       <h1>Book a Consultation</h1>
-      <p class="lead">Tell us a little about what you are working on. We will reply within two working days to arrange a structured conversation.</p>
+      <p class="lead">Tell us about your upcoming evaluation, research study, or strategic review. We will reply within two working days to arrange a structured conversation.</p>
     </div>
   </section>
 
@@ -46,15 +52,16 @@
   <section>
     <div class="wrap book">
       <div>
+        <span class="gallery-badge" style="margin-bottom: 0.5rem;">Direct Engagement</span>
         <h2>Start the conversation</h2>
-        <p class="lead" style="margin-top: 1rem; font-size: 1.05rem;">
-          Whether you are evaluating a strategic shift, commissioning independent market research, or restructuring operational performance, we provide clear preliminary guidance.
+        <p class="lead" style="margin-top: 0.75rem; font-size: 1.05rem;">
+          Whether you are scoping an endline evaluation, drafting a multi-year organizational strategy, or planning a climate-smart agriculture programme in Somalia or East Africa, our senior consultants are ready to assist.
         </p>
 
         <ul style="margin-top: 1.5rem;">
-          <li><strong>Zero commitment:</strong> The first discussion is an exploratory conversation to determine fit and scope.</li>
-          <li><strong>Flexible format:</strong> We can meet via secure video conference or in person at your offices.</li>
-          <li><strong>Strict confidentiality:</strong> All background data and strategic contexts shared are protected under standard non-disclosure terms.</li>
+          <li><strong>Exploratory scoping:</strong> Zero-commitment first discussion to clarify objectives, terms of reference, and methodological options.</li>
+          <li><strong>Contextualized approaches:</strong> Methods tailored to fragile, drought-affected, or emerging operational contexts.</li>
+          <li><strong>Strict confidentiality:</strong> All data, proposals, and institutional documents are protected under standard non-disclosure terms.</li>
         </ul>
 
         <!-- Contact cards -->
@@ -62,15 +69,24 @@
           <div class="contact-card">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             <div>
-              <h4>Direct Email</h4>
-              <p><a href="mailto:info@peninsulainsights.com" style="color: var(--accent); font-weight: 500;">info@peninsulainsights.com</a></p>
+              <h4>Official Email</h4>
+              <p><a href="mailto:info@peninsulainsights.com" style="color: var(--accent); font-weight: 600;">info@peninsulainsights.com</a></p>
             </div>
           </div>
+
           <div class="contact-card">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             <div>
               <h4>Response Turnaround</h4>
-              <p>All inquiries receive an individual response within two business days.</p>
+              <p>Inquiries receive a detailed technical reply within two business days.</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <h4>Geographic Coverage</h4>
+              <p>Somalia (Mogadishu, Hiran, Galgaduud, Bay, Puntland), Somaliland, Kenya &amp; East Africa.</p>
             </div>
           </div>
         </div>
@@ -80,50 +96,55 @@
       <form id="form" novalidate>
         <div class="row">
           <label>Full name
-            <input name="name" autocomplete="name" required placeholder="e.g. Sarah Jenkins">
+            <input name="name" autocomplete="name" required placeholder="e.g. Dr. Amina Yusuf">
             <span class="err" data-for="name"></span>
           </label>
           <label>Email address
-            <input name="email" type="email" autocomplete="email" required placeholder="sarah@example.com">
+            <input name="email" type="email" autocomplete="email" required placeholder="amina@organization.org">
             <span class="err" data-for="email"></span>
           </label>
         </div>
 
         <div class="row">
-          <label>Organisation <span class="hint">(optional)</span>
-            <input name="org" autocomplete="organization" placeholder="e.g. Apex Health Trust">
+          <label>Organisation / Agency <span class="hint">(optional)</span>
+            <input name="org" autocomplete="organization" placeholder="e.g. UN Agency / International NGO / Ministry">
           </label>
           <label>Phone number <span class="hint">(optional)</span>
-            <input name="phone" type="tel" autocomplete="tel" placeholder="+44 ...">
+            <input name="phone" type="tel" autocomplete="tel" placeholder="+252 ... / +254 ...">
           </label>
         </div>
 
         <div class="row">
-          <label>What do you need help with?
+          <label>Area of expertise requested
             <select name="topic" required>
               <option value="">Choose one practice</option>
-              <option>Strategy &amp; Planning</option>
-              <option>Research &amp; Analysis</option>
-              <option>Performance &amp; Change</option>
-              <option>Comprehensive Advisory</option>
-              <option>Not sure yet</option>
+              <option>Research, Assessments &amp; MEAL</option>
+              <option>Strategic Planning &amp; Org Development</option>
+              <option>Climate Change &amp; Climate-Smart Agriculture</option>
+              <option>Agriculture, Livelihoods &amp; Value Chains</option>
+              <option>Gender Equality &amp; SGBV Mainstreaming</option>
+              <option>Thematic Support (WASH, Health, Nutrition, Education)</option>
+              <option>Training &amp; Capacity Strengthening</option>
+              <option>Knowledge Products &amp; Publications</option>
+              <option>Operations, Systems &amp; Risk Management</option>
+              <option>Multiple / Not sure yet</option>
             </select>
             <span class="err" data-for="topic"></span>
           </label>
-          <label>Preferred format
+          <label>Preferred meeting format
             <select name="format">
-              <option>Online video call</option>
+              <option>Online video call (Teams / Zoom)</option>
               <option>In person</option>
               <option>Either is fine</option>
             </select>
           </label>
         </div>
 
-        <label>Tell us about the decision or challenge in front of you
-          <textarea name="message" placeholder="A few sentences outlining your situation, constraints, timeline, and what you hope to achieve from an engagement."></textarea>
+        <label>Tell us about your assignment, timeline, or key questions
+          <textarea name="message" placeholder="A brief summary of your programme, target location, expected scope of work, and key deliverables."></textarea>
         </label>
 
-        <button class="btn" type="submit">Submit Request &rarr;</button>
+        <button class="btn" type="submit">Submit Consultation Request &rarr;</button>
         <p id="status" role="status" aria-live="polite"></p>
       </form>
     </div>
@@ -134,25 +155,28 @@
     <div class="wrap">
       <div class="head">
         <h2>Frequently asked questions</h2>
-        <p class="lead">Helpful context on how initial consultations and subsequent engagements work.</p>
+        <p class="lead">Answers to common questions regarding partnership, field mobilization, and consultancy agreements.</p>
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap: 2rem;">
         <div style="background: var(--bg); padding: 1.5rem; border-radius: 14px; border: 1px solid var(--line);">
-          <h4 style="margin-bottom: 0.5rem;">What happens during the initial consultation?</h4>
-          <p style="color: var(--muted); font-size: 0.98rem;">The first call is a candid 30 to 45-minute discussion. We focus on understanding your core dilemma, time horizons, and organizational context. We will tell you directly if we are the right firm to help.</p>
+          <h4 style="margin-bottom: 0.5rem;">What types of clients do you partner with?</h4>
+          <p style="color: var(--muted); font-size: 0.98rem;">We partner with international non-governmental organizations (INGOs), UN agencies, bilateral and multilateral donor programmes, academic institutions, and federal and state-level government bodies.</p>
         </div>
+
         <div style="background: var(--bg); padding: 1.5rem; border-radius: 14px; border: 1px solid var(--line);">
-          <h4 style="margin-bottom: 0.5rem;">How quickly can work commence?</h4>
-          <p style="color: var(--muted); font-size: 0.98rem;">Following an initial scoping agreement, our advisory team typically begins active discovery and field interviews within one to two weeks.</p>
+          <h4 style="margin-bottom: 0.5rem;">How quickly can your field teams mobilize?</h4>
+          <p style="color: var(--muted); font-size: 0.98rem;">With established field networks and enumerator pools across Somalia, Somaliland, and Kenya, we routinely deploy teams for inception, digital tool testing, and fieldwork within 7 to 14 days of contract signing.</p>
         </div>
+
         <div style="background: var(--bg); padding: 1.5rem; border-radius: 14px; border: 1px solid var(--line);">
-          <h4 style="margin-bottom: 0.5rem;">Do you work under confidentiality agreements (NDAs)?</h4>
-          <p style="color: var(--muted); font-size: 0.98rem;">Yes. We routinely execute mutual NDAs prior to reviewing proprietary financial models, board papers, or sensitive organisational data.</p>
+          <h4 style="margin-bottom: 0.5rem;">What research ethics and safeguarding protocols do you apply?</h4>
+          <p style="color: var(--muted); font-size: 0.98rem;">All our assignments strictly follow international research standards, informed consent protocols, PSEAH safeguarding policies, and gender-sensitive (GESI) approaches, with data secured in encrypted databases.</p>
         </div>
+
         <div style="background: var(--bg); padding: 1.5rem; border-radius: 14px; border: 1px solid var(--line);">
-          <h4 style="margin-bottom: 0.5rem;">Where can I see examples of your previous work?</h4>
-          <p style="color: var(--muted); font-size: 0.98rem;">You can explore our visual case archive on the <a href="gallery.html" style="color: var(--accent); text-decoration: underline;">Gallery page</a>, which illustrates strategic sessions, field research, and institutional advisory projects.</p>
+          <h4 style="margin-bottom: 0.5rem;">Where can we inspect evidence of previous field assignments?</h4>
+          <p style="color: var(--muted); font-size: 0.98rem;">You can explore photographic and technical records on our <a href="gallery.html" style="color: var(--accent); text-decoration: underline;">Field Photos &amp; Projects page</a>, showing solar irrigation works, canal headworks, and soil erosion bunding in Hiran.</p>
         </div>
       </div>
     </div>
@@ -163,16 +187,23 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="brand" href="index.html">Peninsula Insights</a>
-        <p>A strategic consultancy helping leadership teams, institutions, and growing businesses make clear, well-evidenced decisions.</p>
+        <a class="brand" href="index.html">
+          <img src="photos/logo.png" alt="Peninsula Insights Consulting" style="height: 38px; border-radius: 6px;">
+          <div class="brand-text-wrap">
+            <span class="brand-title">Peninsula Insights</span>
+            <span class="brand-sub">Consulting</span>
+          </div>
+        </a>
+        <p style="margin-top: 0.75rem;">Established 15 July 2021 | Somalia &amp; Beyond. Research &bull; Strategy &bull; Resilience &bull; Programme Quality.</p>
+        <p style="font-size: 0.88rem; color: var(--accent); font-weight: 500;">Empowering Change, Driving Success</p>
       </div>
       <div>
         <h4 style="margin-bottom: 0.85rem;">Navigation</h4>
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li><a href="services.html">Services &amp; Expertise</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="gallery.html">Gallery &amp; Photos</a></li>
+          <li><a href="gallery.html">Field Photos &amp; Projects</a></li>
           <li><a class="active" href="contact.html">Book a Consultation</a></li>
         </ul>
       </div>
@@ -181,12 +212,13 @@
         <ul class="footer-links">
           <li><a href="mailto:info@peninsulainsights.com">info@peninsulainsights.com</a></li>
           <li><span>Two working days reply</span></li>
+          <li><span>Somalia &amp; East Africa</span></li>
           <li><a href="contact.html">Consultation Request &rarr;</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; <span class="dynamic-yr">2026</span> Peninsula Insights. All rights reserved.</span>
+      <span>&copy; <span class="dynamic-yr">2026</span> Peninsula Insights Consulting. All rights reserved.</span>
       <span>peninsulainsights.com</span>
     </div>
   </div>
