@@ -420,7 +420,7 @@ nav a.btn.active::after {
   position: relative;
   overflow: hidden;
   background-image: 
-    linear-gradient(90deg, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255, 0.80) 42%, rgba(255, 255, 255, 0.52) 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.84) 0%, rgba(255, 255, 255, 0.70) 45%, rgba(255, 255, 255, 0.36) 100%),
     url("../photos/solar-irrigation-system.jpeg");
   background-size: cover;
   background-position: center 35%;
@@ -447,12 +447,12 @@ nav a.btn.active::after {
 .hero-left {
   display: grid;
   gap: 1.35rem;
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   padding: clamp(1.75rem, 3.2vw, 2.75rem);
   border-radius: 20px;
-  border: 1px solid rgba(226, 232, 240, 0.9);
+  border: 1px solid rgba(226, 232, 240, 0.95);
   box-shadow: 0 12px 32px -4px rgba(15, 23, 42, 0.08);
 }
 
@@ -477,9 +477,9 @@ nav a.btn.active::after {
 
 .hero-brand-name {
   font-family: var(--sans);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.06em;
   color: #15803D;
   text-transform: uppercase;
 }
@@ -548,7 +548,7 @@ nav a.btn.active::after {
   position: relative;
   padding: clamp(2.75rem, 4.5vw, 4.5rem) 0 clamp(2.25rem, 3.5vw, 3.5rem);
   background-image: 
-    linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.92) 100%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(248, 250, 252, 0.82) 100%),
     url("../photos/crop-monitoring-field.jpeg");
   background-size: cover;
   background-position: center;
