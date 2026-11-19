@@ -414,19 +414,50 @@ nav a.btn.active::after {
 }
 
 /* ==========================================================================
-   Expansive Desktop Hero Section with Background Photo & Crisp Overlay
+   Expansive Desktop Hero Section with Fast Hardware-Accelerated Background
    ========================================================================== */
 .hero {
   position: relative;
   overflow: hidden;
-  background-image: 
-    linear-gradient(90deg, rgba(255, 255, 255, 0.84) 0%, rgba(255, 255, 255, 0.70) 45%, rgba(255, 255, 255, 0.36) 100%),
-    url("../photos/solar-irrigation-system.jpeg");
-  background-size: cover;
-  background-position: center 35%;
-  background-repeat: no-repeat;
+  background-color: #E2E8F0;
+  /* Instant fallback gradient if image takes a moment to paint */
+  background-image: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 45%, #dcfce7 100%);
   padding: clamp(3.5rem, 6vw, 6.5rem) 0 clamp(3rem, 5vw, 5.5rem);
   border-bottom: 1px solid var(--line);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  background-color: #E2E8F0;
+  background-image: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 45%, #dcfce7 100%);
+}
+
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.84) 0%, rgba(255, 255, 255, 0.70) 45%, rgba(255, 255, 255, 0.36) 100%);
+  z-index: 1;
+}
+
+.hero .wrap {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-grid {
@@ -434,7 +465,6 @@ nav a.btn.active::after {
   gap: 3rem;
   align-items: center;
   position: relative;
-  z-index: 1;
 }
 
 @media (min-width: 1080px) {
@@ -447,9 +477,10 @@ nav a.btn.active::after {
 .hero-left {
   display: grid;
   gap: 1.35rem;
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transform: translateZ(0);
   padding: clamp(1.75rem, 3.2vw, 2.75rem);
   border-radius: 20px;
   border: 1px solid rgba(226, 232, 240, 0.95);

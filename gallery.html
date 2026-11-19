@@ -5,9 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Project Gallery &amp; Field Archive | Peninsula Insights Consulting</title>
   <meta name="description" content="Explore on-the-ground photos and detailed project descriptions of Peninsula Insights Consulting field initiatives, climate-resilient food systems, irrigation infrastructure, and community advisory.">
+  <!-- High-Priority Resource Preloads for Instant Page & Background Loading -->
+  <link rel="preload" as="image" href="photos/crop-monitoring-field.jpeg" fetchpriority="high">
+  <link rel="preload" as="image" href="photos/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Figtree:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Figtree:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Figtree:wght@400;500;600&display=swap">
+  </noscript>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,7 +22,7 @@
 <header>
   <div class="wrap bar">
     <a class="brand" href="index.html">
-      <img src="photos/logo.png" alt="Peninsula Insights Consulting Logo" class="brand-logo">
+      <img src="photos/logo.png" alt="Peninsula Insights Consulting Logo" class="brand-logo" width="688" height="535" decoding="async">
       <div class="brand-text-wrap">
         <span class="brand-title">Peninsula Insights</span>
         <span class="brand-sub">Consulting</span>
@@ -81,7 +88,7 @@
         <!-- Card 1: Official Brand Identity Card in Photos Section -->
         <article class="gallery-card" data-category="brand">
           <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Peninsula Insights Consulting Brand Logo">
-            <img class="gallery-img" src="photos/logo.png" alt="Peninsula Insights Consulting Corporate Brand Logo" style="object-fit: contain; background: #3B72B8; padding: 1rem;">
+            <img class="gallery-img" src="photos/logo.png" alt="Peninsula Insights Consulting Corporate Brand Logo" width="688" height="535" decoding="async" style="object-fit: contain; background: #3B72B8; padding: 1rem;">
             <span class="gallery-expand-hint">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               Click to view
@@ -103,7 +110,7 @@
         <!-- Card 2: Solar Irrigation System -->
         <article class="gallery-card" data-category="solar">
           <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Solar-Powered Irrigation Pumping System photo">
-            <img class="gallery-img" src="photos/solar-irrigation-system.jpeg" alt="Solar-Powered Irrigation Pumping System in Habaasweyne Village" loading="lazy">
+            <img class="gallery-img" src="photos/solar-irrigation-system.jpeg" alt="Solar-Powered Irrigation Pumping System in Habaasweyne Village" width="1080" height="608" loading="lazy" decoding="async">
             <span class="gallery-expand-hint">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               Click to view
@@ -125,7 +132,7 @@
         <!-- Card 3: Water Canal Headworks -->
         <article class="gallery-card" data-category="irrigation">
           <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Canal Operations &amp; Technical Inspection photo">
-            <img class="gallery-img" src="photos/water-canal-headworks.jpeg" alt="Canal Operations &amp; Technical Inspection in Hiran" loading="lazy">
+            <img class="gallery-img" src="photos/water-canal-headworks.jpeg" alt="Canal Operations &amp; Technical Inspection in Hiran" width="1080" height="608" loading="lazy" decoding="async">
             <span class="gallery-expand-hint">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               Click to view
@@ -147,7 +154,7 @@
         <!-- Card 4: Rice Cultivation Trials -->
         <article class="gallery-card" data-category="agriculture">
           <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Irrigated Rice Crop Diversification Trials photo">
-            <img class="gallery-img" src="photos/rice-cultivation-trials.jpeg" alt="Irrigated Rice Crop Diversification Trials in Habaasweyne" loading="lazy">
+            <img class="gallery-img" src="photos/rice-cultivation-trials.jpeg" alt="Irrigated Rice Crop Diversification Trials in Habaasweyne" width="608" height="1080" loading="lazy" decoding="async">
             <span class="gallery-expand-hint">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               Click to view
@@ -169,7 +176,7 @@
         <!-- Card 5: Crop Monitoring Field -->
         <article class="gallery-card" data-category="monitoring">
           <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Field Monitoring &amp; GPS Agronomic Trials photo">
-            <img class="gallery-img" src="photos/crop-monitoring-field.jpeg" alt="GPS Agronomic Field Monitoring in Beledweyne" loading="lazy">
+            <img class="gallery-img" src="photos/crop-monitoring-field.jpeg" alt="GPS Agronomic Field Monitoring in Beledweyne" width="608" height="1080" loading="lazy" decoding="async">
             <span class="gallery-expand-hint">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               Click to view

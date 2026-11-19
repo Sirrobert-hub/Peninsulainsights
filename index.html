@@ -5,9 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Peninsula Insights Consulting | Empowering Change, Driving Success</title>
   <meta name="description" content="Peninsula Insights Consulting is a development consultancy in Somalia and beyond, delivering multidisciplinary expertise in MEAL, research, strategy, climate resilience, agriculture, and WASH.">
+  
+  <!-- High-Priority Resource Preloads for Instant Page & Background Loading -->
+  <link rel="preload" as="image" href="photos/solar-irrigation-system.jpeg" fetchpriority="high">
+  <link rel="preload" as="image" href="photos/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Figtree:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Figtree:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Figtree:wght@400;500;600&display=swap">
+  </noscript>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,7 +23,7 @@
 <header>
   <div class="wrap bar">
     <a class="brand" href="index.html">
-      <img src="photos/logo.png" alt="Peninsula Insights Consulting Logo" class="brand-logo">
+      <img src="photos/logo.png" alt="Peninsula Insights Consulting Logo" class="brand-logo" width="688" height="535" decoding="async">
       <div class="brand-text-wrap">
         <span class="brand-title">Peninsula Insights</span>
         <span class="brand-sub">Consulting</span>
@@ -38,8 +46,12 @@
 </header>
 
 <main id="top">
-  <!-- Expansive Desktop Hero Section -->
+  <!-- Expansive Desktop Hero Section with Fast Hardware-Accelerated Background -->
   <div class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <img src="photos/solar-irrigation-system.jpeg" alt="" class="hero-bg-img" width="1080" height="608" fetchpriority="high" decoding="async">
+      <div class="hero-bg-overlay"></div>
+    </div>
     <div class="wrap">
       <div class="hero-grid">
         <div class="hero-left">
@@ -66,7 +78,7 @@
         <!-- Hero Right: Featured Field Photograph from Photos -->
         <div class="hero-featured-photo-card">
           <div class="hero-featured-photo-wrap">
-            <img src="photos/water-canal-headworks.jpeg" alt="Canal Infrastructure &amp; Distribution Headworks" class="hero-featured-img">
+            <img src="photos/water-canal-headworks.jpeg" alt="Canal Infrastructure &amp; Distribution Headworks" class="hero-featured-img" width="1080" height="608" fetchpriority="high" decoding="async">
             <div class="hero-featured-caption">
               <span class="gallery-badge" style="width: fit-content;">Field Project</span>
               <h4>Canal Infrastructure &amp; Distribution Headworks</h4>
@@ -176,7 +188,7 @@
       <!-- Corporate Brand Highlight Banner in the Photos Section -->
       <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: clamp(1.25rem, 2.5vw, 1.75rem); margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; box-shadow: var(--card-shadow);">
         <div style="display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap;">
-          <img src="photos/logo.png" alt="Peninsula Insights Consulting" style="height: 60px; width: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+          <img src="photos/logo.png" alt="Peninsula Insights Consulting" width="688" height="535" loading="lazy" decoding="async" style="height: 60px; width: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
           <div>
             <h4 style="margin: 0; font-size: 1.15rem; color: var(--ink);">Peninsula Insights Consulting &bull; Visual Record</h4>
             <p style="margin: 0.2rem 0 0; color: var(--muted); font-size: 0.94rem;">Empowering Change, Driving Success &bull; Research &bull; Strategy &bull; Resilience &bull; Programme Quality</p>
@@ -191,7 +203,7 @@
         <!-- Photo 1: Solar System -->
         <article class="gallery-card" data-category="solar">
           <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Solar-Powered Irrigation System photo">
-            <img class="gallery-img" src="photos/solar-irrigation-system.jpeg" alt="Solar Photovoltaic Pumping Infrastructure in Habaasweyne" loading="lazy">
+            <img class="gallery-img" src="photos/solar-irrigation-system.jpeg" alt="Solar Photovoltaic Pumping Infrastructure in Habaasweyne" width="1080" height="608" loading="lazy" decoding="async">
             <span class="gallery-expand-hint">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               Click to view
@@ -213,7 +225,7 @@
         <!-- Photo 2: Water Canal Headworks -->
         <article class="gallery-card" data-category="irrigation">
           <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Canal Operations &amp; Technical Inspection photo">
-            <img class="gallery-img" src="photos/water-canal-headworks.jpeg" alt="Canal Operations &amp; Technical Inspection in Hiran" loading="lazy">
+            <img class="gallery-img" src="photos/water-canal-headworks.jpeg" alt="Canal Operations &amp; Technical Inspection in Hiran" width="1080" height="608" loading="lazy" decoding="async">
             <span class="gallery-expand-hint">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               Click to view
@@ -235,7 +247,7 @@
         <!-- Photo 3: Rice Cultivation Trials -->
         <article class="gallery-card" data-category="agriculture">
           <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Irrigated Rice Crop Diversification Trials photo">
-            <img class="gallery-img" src="photos/rice-cultivation-trials.jpeg" alt="Irrigated Rice Crop Diversification Trials in Habaasweyne" loading="lazy">
+            <img class="gallery-img" src="photos/rice-cultivation-trials.jpeg" alt="Irrigated Rice Crop Diversification Trials in Habaasweyne" width="608" height="1080" loading="lazy" decoding="async">
             <span class="gallery-expand-hint">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               Click to view
@@ -257,7 +269,7 @@
         <!-- Photo 4: Crop Monitoring Field -->
         <article class="gallery-card" data-category="monitoring">
           <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Field Monitoring &amp; GPS Agronomic Trials photo">
-            <img class="gallery-img" src="photos/crop-monitoring-field.jpeg" alt="GPS Agronomic Field Monitoring in Beledweyne" loading="lazy">
+            <img class="gallery-img" src="photos/crop-monitoring-field.jpeg" alt="GPS Agronomic Field Monitoring in Beledweyne" width="608" height="1080" loading="lazy" decoding="async">
             <span class="gallery-expand-hint">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               Click to view
