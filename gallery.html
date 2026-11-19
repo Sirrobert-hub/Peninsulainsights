@@ -15,7 +15,7 @@
 <header>
   <div class="wrap bar">
     <a class="brand" href="index.html">
-      <img src="photos/logo-mark.png" alt="Peninsula Insights Consulting" class="brand-mark">
+      <img src="photos/logo.png" alt="Peninsula Insights Consulting Logo" class="brand-logo">
       <div class="brand-text-wrap">
         <span class="brand-title">Peninsula Insights</span>
         <span class="brand-sub">Consulting</span>
@@ -41,9 +41,9 @@
   <!-- Page Header -->
   <section class="page-hero">
     <div class="wrap">
-      <span class="page-tag">Field Work &amp; Visual Archive</span>
+      <span class="page-tag">Field Work &bull; Visual Archive &bull; Brand Identity</span>
       <h1>Field Photos &amp; Project Insights</h1>
-      <p class="lead">Documenting on-the-ground interventions: climate-resilient irrigation infrastructure, solar energy systems, soil conservation bunds, and sustainable livelihood programs in Somalia.</p>
+      <p class="lead">Documenting on-the-ground interventions: solar pumping infrastructure, concrete canal headworks, experimental rice crop trials, and agronomic monitoring across Somalia.</p>
     </div>
   </section>
 
@@ -53,18 +53,54 @@
       
       <!-- Filter Controls -->
       <div class="gallery-filters" role="group" aria-label="Filter photos by category">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="irrigation">Irrigation &amp; Water</button>
+        <button class="filter-btn active" data-filter="all">All Visuals</button>
+        <button class="filter-btn" data-filter="brand">Brand Identity</button>
         <button class="filter-btn" data-filter="solar">Solar Energy</button>
-        <button class="filter-btn" data-filter="soil">Soil Conservation</button>
+        <button class="filter-btn" data-filter="irrigation">Irrigation &amp; Water</button>
         <button class="filter-btn" data-filter="agriculture">Agriculture &amp; Crops</button>
-        <button class="filter-btn" data-filter="livelihoods">Livelihoods &amp; Apiculture</button>
+        <button class="filter-btn" data-filter="monitoring">Field Monitoring</button>
       </div>
 
-      <!-- Photo Cards Grid -->
+      <!-- Corporate Identity Spotlight Banner in the Photos Section -->
+      <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: clamp(1.5rem, 3vw, 2.25rem); margin-bottom: 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 2rem; box-shadow: var(--card-shadow);">
+        <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+          <img src="photos/logo.png" alt="Peninsula Insights Consulting" style="height: 72px; width: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+          <div>
+            <h3 style="margin: 0; font-size: 1.35rem; color: var(--ink);">Peninsula Insights Consulting &bull; Corporate Visuals</h3>
+            <p style="margin: 0.35rem 0 0; color: var(--muted); font-size: 1rem;">Empowering Change, Driving Success &bull; Research &bull; Strategy &bull; Resilience &bull; Programme Quality</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.75rem; align-items: center;">
+          <span class="gallery-badge" style="font-size: 0.85rem; padding: 0.35rem 0.9rem;">Somalia &amp; East Africa</span>
+        </div>
+      </div>
+
+      <!-- Full-Width Responsive Gallery Grid -->
       <div class="gallery-grid">
 
-        <!-- Photo 1: Solar Irrigation -->
+        <!-- Card 1: Official Brand Identity Card in Photos Section -->
+        <article class="gallery-card" data-category="brand">
+          <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Peninsula Insights Consulting Brand Logo">
+            <img class="gallery-img" src="photos/logo.png" alt="Peninsula Insights Consulting Corporate Brand Logo" style="object-fit: contain; background: #3B72B8; padding: 1rem;">
+            <span class="gallery-expand-hint">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              Click to view
+            </span>
+          </div>
+          <div class="gallery-content">
+            <div class="gallery-meta">
+              <span class="gallery-badge">Corporate Identity</span>
+              <span class="gallery-date">Somalia &amp; Beyond</span>
+            </div>
+            <h3 class="gallery-title">Peninsula Insights Consulting Brand Identity</h3>
+            <p class="gallery-desc">Our corporate emblem: Empowering Change, Driving Success. The intertwined blue and green geometries represent water, land, resilience, and evidence-driven development across Somalia and beyond.</p>
+            <div class="gallery-footer-action">
+              <button class="gallery-view-btn" data-action="open-modal">View details &rarr;</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Solar Irrigation System -->
         <article class="gallery-card" data-category="solar">
           <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Solar-Powered Irrigation Pumping System photo">
             <img class="gallery-img" src="photos/solar-irrigation-system.jpeg" alt="Solar-Powered Irrigation Pumping System in Habaasweyne Village" loading="lazy">
@@ -81,15 +117,15 @@
             <h3 class="gallery-title">Solar Photovoltaic Pumping Infrastructure</h3>
             <p class="gallery-desc">Ground-mounted solar photovoltaic array with protective mesh enclosure, delivering continuous zero-emission energy to high-volume irrigation pumps. By replacing expensive diesel generators, this system delivers an economical, reliable water supply directly into agricultural canals for smallholder farmers.</p>
             <div class="gallery-footer-action">
-              <button class="gallery-view-btn" data-action="open-modal">View photo &amp; details &rarr;</button>
+              <button class="gallery-view-btn" data-action="open-modal">View details &rarr;</button>
             </div>
           </div>
         </article>
 
-        <!-- Photo 2: Canal Water Discharge Outfall -->
+        <!-- Card 3: Water Canal Headworks -->
         <article class="gallery-card" data-category="irrigation">
-          <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Irrigation Canal Outfall &amp; Water Distribution photo">
-            <img class="gallery-img" src="photos/canal-water-discharge.jpeg" alt="Irrigation Canal Outfall &amp; Water Distribution in Habaasweyne" loading="lazy">
+          <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Canal Operations &amp; Technical Inspection photo">
+            <img class="gallery-img" src="photos/water-canal-headworks.jpeg" alt="Canal Operations &amp; Technical Inspection in Hiran" loading="lazy">
             <span class="gallery-expand-hint">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
               Click to view
@@ -100,37 +136,15 @@
               <span class="gallery-badge">Irrigation &amp; Water</span>
               <span class="gallery-date">Habaasweyne Village</span>
             </div>
-            <h3 class="gallery-title">Irrigation Canal Outfall &amp; Water Distribution</h3>
-            <p class="gallery-desc">Concrete-reinforced canal headworks and pressurized pipeline discharging fresh irrigation water into main supply channels. Part of the Climate-Resilient Food Systems project, this installation regulates water flow, eliminates silt buildup, and protects adjacent banks from water logging and erosion.</p>
+            <h3 class="gallery-title">Canal Operations &amp; Technical Field Inspection</h3>
+            <p class="gallery-desc">On-site technical review assessing canal water flow velocity, embankment stability, and pump discharge pressure. Engineered with reinforced concrete headworks and erosion-resistant embankments to prevent siltation, regulate seasonal flood waters, and deliver measured irrigation downstream.</p>
             <div class="gallery-footer-action">
-              <button class="gallery-view-btn" data-action="open-modal">View photo &amp; details &rarr;</button>
+              <button class="gallery-view-btn" data-action="open-modal">View details &rarr;</button>
             </div>
           </div>
         </article>
 
-        <!-- Photo 3: Soil Erosion Bunds -->
-        <article class="gallery-card" data-category="soil">
-          <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Soil Erosion Control Bunds photo">
-            <img class="gallery-img" src="photos/soil-erosion-bunds.jpeg" alt="Soil Erosion Control Bunds (Caratuurka) in Beledweyne" loading="lazy">
-            <span class="gallery-expand-hint">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-              Click to view
-            </span>
-          </div>
-          <div class="gallery-content">
-            <div class="gallery-meta">
-              <span class="gallery-badge">Soil Conservation</span>
-              <span class="gallery-date">Beledweyne &bull; Hiran</span>
-            </div>
-            <h3 class="gallery-title">Soil Erosion Control Bunds (Caratuurka)</h3>
-            <p class="gallery-desc">Mechanical contour earth bunding and land terracing across expansive agricultural acreage in Beledweyne. These earthwork structures arrest seasonal stormwater runoff, prevent valuable topsoil loss, and increase in-situ soil moisture retention for rainfed and irrigated crop cycles.</p>
-            <div class="gallery-footer-action">
-              <button class="gallery-view-btn" data-action="open-modal">View photo &amp; details &rarr;</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Photo 4: Rice Crop Trials -->
+        <!-- Card 4: Rice Cultivation Trials -->
         <article class="gallery-card" data-category="agriculture">
           <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Irrigated Rice Crop Diversification Trials photo">
             <img class="gallery-img" src="photos/rice-cultivation-trials.jpeg" alt="Irrigated Rice Crop Diversification Trials in Habaasweyne" loading="lazy">
@@ -147,35 +161,13 @@
             <h3 class="gallery-title">Irrigated Rice Cultivation &amp; Crop Diversification</h3>
             <p class="gallery-desc">Field trials evaluating high-performance cereal and rice varieties grown under regulated furrow and basin irrigation. Demonstrates the viability of diversifying staples beyond traditional sorghum and maize, dramatically improving household food security and agricultural resilience.</p>
             <div class="gallery-footer-action">
-              <button class="gallery-view-btn" data-action="open-modal">View photo &amp; details &rarr;</button>
+              <button class="gallery-view-btn" data-action="open-modal">View details &rarr;</button>
             </div>
           </div>
         </article>
 
-        <!-- Photo 5: Beekeeping Equipment -->
-        <article class="gallery-card" data-category="livelihoods">
-          <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Beekeeping &amp; Honey Production Equipment photo">
-            <img class="gallery-img" src="photos/beekeeping-equipment.jpeg" alt="Beekeeping &amp; Honey Production Equipment in Hiran" loading="lazy">
-            <span class="gallery-expand-hint">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-              Click to view
-            </span>
-          </div>
-          <div class="gallery-content">
-            <div class="gallery-meta">
-              <span class="gallery-badge">Livelihoods</span>
-              <span class="gallery-date">Habaasweyne Village</span>
-            </div>
-            <h3 class="gallery-title">Beekeeping &amp; Honey Production Livelihood Kit</h3>
-            <p class="gallery-desc">Provision of modern apiculture equipment kits, including multi-tier Langstroth wooden hives, stainless steel smokers, protective suits, and food-grade packaging containers. Designed to equip local agro-pastoralist families with alternative, high-value honey income streams.</p>
-            <div class="gallery-footer-action">
-              <button class="gallery-view-btn" data-action="open-modal">View photo &amp; details &rarr;</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Photo 6: Field Monitoring & Agronomic Trials -->
-        <article class="gallery-card" data-category="agriculture">
+        <!-- Card 5: Crop Monitoring Field -->
+        <article class="gallery-card" data-category="monitoring">
           <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Field Monitoring &amp; GPS Agronomic Trials photo">
             <img class="gallery-img" src="photos/crop-monitoring-field.jpeg" alt="GPS Agronomic Field Monitoring in Beledweyne" loading="lazy">
             <span class="gallery-expand-hint">
@@ -185,50 +177,18 @@
           </div>
           <div class="gallery-content">
             <div class="gallery-meta">
-              <span class="gallery-badge">Agriculture</span>
+              <span class="gallery-badge">Field Monitoring</span>
               <span class="gallery-date">Beledweyne &bull; Hiran</span>
             </div>
             <h3 class="gallery-title">Field Monitoring &amp; GPS Agronomic Trials</h3>
             <p class="gallery-desc">GPS-tagged field monitoring and data logging of crop emergence and vegetative health in irrigated demonstration plots. Rigorous data collection provides empirical evidence for agricultural extension workers and community farmer associations.</p>
             <div class="gallery-footer-action">
-              <button class="gallery-view-btn" data-action="open-modal">View photo &amp; details &rarr;</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Photo 7: Canal Operations & Technical Inspection -->
-        <article class="gallery-card" data-category="irrigation">
-          <div class="gallery-img-container" data-action="open-modal" tabindex="0" role="button" aria-label="Enlarge Canal Operations &amp; Technical Inspection photo">
-            <img class="gallery-img" src="photos/water-canal-headworks.jpeg" alt="Canal Operations &amp; Technical Inspection in Hiran" loading="lazy">
-            <span class="gallery-expand-hint">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-              Click to view
-            </span>
-          </div>
-          <div class="gallery-content">
-            <div class="gallery-meta">
-              <span class="gallery-badge">Irrigation &amp; Water</span>
-              <span class="gallery-date">Infrastructure Review</span>
-            </div>
-            <h3 class="gallery-title">Canal Operations &amp; Technical Field Inspection</h3>
-            <p class="gallery-desc">On-site technical review of the canal water flow rate, embankment stability, and pump intake discharge pressure. Verified that operational parameters match project design benchmarks to safeguard uninterrupted crop irrigation during peak dry periods.</p>
-            <div class="gallery-footer-action">
-              <button class="gallery-view-btn" data-action="open-modal">View photo &amp; details &rarr;</button>
+              <button class="gallery-view-btn" data-action="open-modal">View details &rarr;</button>
             </div>
           </div>
         </article>
 
       </div>
-
-      <!-- User Information Box for adding more photos -->
-      <div style="margin-top: 3rem; padding: 1.5rem 1.75rem; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; box-shadow: var(--card-shadow);">
-        <div>
-          <h4 style="margin-bottom: 0.25rem;">Want to add more photos?</h4>
-          <p style="color: var(--muted); font-size: 0.94rem;">Transfer any additional photos directly into the <code>photos/</code> folder. They can be showcased on this page with custom titles and categories.</p>
-        </div>
-        <a href="contact.html" class="btn sm">Discuss a Project</a>
-      </div>
-
     </div>
   </section>
 
@@ -269,13 +229,13 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a class="brand" href="index.html">
-          <img src="photos/logo-mark.png" alt="Peninsula Insights Consulting" class="brand-mark">
+          <img src="photos/logo.png" alt="Peninsula Insights Consulting" class="brand-logo">
           <div class="brand-text-wrap">
             <span class="brand-title">Peninsula Insights</span>
             <span class="brand-sub">Consulting</span>
           </div>
         </a>
-        <p style="margin-top: 0.75rem;">Established 15 July 2021 | Somalia &amp; Beyond. Research &bull; Strategy &bull; Resilience &bull; Programme Quality.</p>
+        <p style="margin-top: 0.75rem;">Research &bull; Strategy &bull; Resilience &bull; Programme Quality &bull; Somalia &amp; Beyond.</p>
         <p style="font-size: 0.88rem; color: var(--accent); font-weight: 600;">Empowering Change, Driving Success</p>
       </div>
       <div>

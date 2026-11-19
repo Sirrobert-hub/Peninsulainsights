@@ -1,5 +1,6 @@
 /* ==========================================================================
-   Peninsula Insights Consulting - Modern Corporate Light Theme & Responsive CSS
+   Peninsula Insights Consulting - Modern Corporate Light Theme
+   Expanded Desktop Responsiveness & Full-Width Layout
    ========================================================================== */
 
 :root {
@@ -27,7 +28,7 @@
   
   --focus: #2563EB;
   --card-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.05);
-  --card-shadow-hover: 0 12px 24px -4px rgba(15, 23, 42, 0.08), 0 4px 8px -2px rgba(15, 23, 42, 0.04);
+  --card-shadow-hover: 0 14px 28px -4px rgba(15, 23, 42, 0.09), 0 6px 12px -2px rgba(15, 23, 42, 0.04);
   
   /* Typography */
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
@@ -49,7 +50,7 @@
 }
 
 html {
-  scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 80px);
+  scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 84px);
   scroll-behavior: smooth;
   overflow-x: hidden;
   width: 100%;
@@ -93,14 +94,36 @@ a {
   border-radius: 4px;
 }
 
+/* ==========================================================================
+   Full-Desktop Responsive Container (.wrap)
+   Eliminating empty blank gutters on left & right
+   ========================================================================== */
 .wrap {
-  width: min(1160px, 100% - 2.5rem);
+  width: min(1680px, 100% - 4rem);
   margin-inline: auto;
 }
 
-@media (max-width: 640px) {
+@media (min-width: 1440px) {
   .wrap {
-    width: calc(100% - 1.75rem);
+    width: min(1760px, 94%);
+  }
+}
+
+@media (min-width: 1920px) {
+  .wrap {
+    width: min(1880px, 94%);
+  }
+}
+
+@media (max-width: 900px) {
+  .wrap {
+    width: calc(100% - 2.5rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .wrap {
+    width: calc(100% - 1.5rem);
   }
 }
 
@@ -108,28 +131,28 @@ a {
 h1, h2, h3, h4, h5 {
   font-family: var(--serif);
   font-weight: 500;
-  line-height: 1.18;
+  line-height: 1.16;
   letter-spacing: -0.018em;
   margin: 0;
   color: var(--ink);
 }
 
 h1 {
-  font-size: clamp(2.1rem, 5vw, 3.8rem);
+  font-size: clamp(2.3rem, 4.4vw, 4.2rem);
   font-weight: 500;
 }
 
 h2 {
-  font-size: clamp(1.65rem, 3.5vw, 2.45rem);
+  font-size: clamp(1.8rem, 3.2vw, 2.85rem);
 }
 
 h3 {
-  font-size: clamp(1.2rem, 2.2vw, 1.4rem);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
   line-height: 1.3;
 }
 
 h4 {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-family: var(--sans);
   font-weight: 600;
   letter-spacing: -0.01em;
@@ -141,32 +164,32 @@ p {
 }
 
 .lead {
-  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-size: clamp(1.1rem, 1.6vw, 1.3rem);
   color: var(--muted);
-  max-width: 62ch;
+  max-width: 85ch;
   line-height: 1.65;
 }
 
 /* ==========================================================================
-   Header & Navigation (Fully Responsive)
+   Header & Navigation (Full-Width Responsive)
    ========================================================================== */
 header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
 }
 
 .bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.25rem;
-  min-height: 72px;
+  gap: 1.5rem;
+  min-height: 76px;
 }
 
 .brand {
@@ -174,15 +197,24 @@ header {
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.85rem;
   flex-shrink: 0;
 }
 
-.brand-mark {
-  height: 42px;
+.brand-logo {
+  height: 48px;
   width: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   display: block;
   flex-shrink: 0;
+}
+
+@media (min-width: 1200px) {
+  .brand-logo {
+    height: 52px;
+  }
 }
 
 .brand-text-wrap {
@@ -192,7 +224,7 @@ header {
 }
 
 .brand-title {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--ink);
   letter-spacing: -0.015em;
@@ -209,7 +241,7 @@ header {
 
 nav ul {
   display: flex;
-  gap: 1.75rem;
+  gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -219,10 +251,10 @@ nav ul {
 nav a {
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.96rem;
+  font-size: 1rem;
   color: var(--muted);
   position: relative;
-  padding: 0.35rem 0;
+  padding: 0.4rem 0;
 }
 
 nav a:hover {
@@ -251,12 +283,12 @@ nav a.active::after {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  min-height: 46px;
-  padding: 0.7rem 1.45rem;
+  min-height: 48px;
+  padding: 0.75rem 1.6rem;
   border-radius: 8px;
   background: var(--accent);
   color: var(--accent-ink);
-  font: 600 0.95rem var(--sans);
+  font: 600 0.98rem var(--sans);
   text-decoration: none;
   border: 1px solid var(--accent);
   cursor: pointer;
@@ -268,7 +300,8 @@ nav a.active::after {
   background: var(--accent-hover);
   border-color: var(--accent-hover);
   color: #FFFFFF;
-  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
+  box-shadow: 0 4px 14px rgba(22, 163, 74, 0.25);
+  transform: translateY(-1px);
 }
 
 .btn.ghost {
@@ -285,17 +318,17 @@ nav a.active::after {
 }
 
 .btn.sm {
-  min-height: 38px;
-  padding: 0.45rem 1rem;
-  font-size: 0.88rem;
+  min-height: 40px;
+  padding: 0.5rem 1.15rem;
+  font-size: 0.92rem;
   border-radius: 6px;
 }
 
 nav .btn {
-  min-height: 40px;
-  padding: 0.45rem 1.15rem;
+  min-height: 42px;
+  padding: 0.5rem 1.25rem;
   border-radius: 6px;
-  font-size: 0.92rem;
+  font-size: 0.95rem;
 }
 
 nav a.btn.active::after {
@@ -309,19 +342,19 @@ nav a.btn.active::after {
   border: 1.5px solid var(--line);
   color: var(--ink);
   border-radius: 8px;
-  min-height: 42px;
-  padding: 0 0.95rem;
-  font: 600 0.92rem var(--sans);
+  min-height: 44px;
+  padding: 0 1rem;
+  font: 600 0.95rem var(--sans);
   cursor: pointer;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
 }
 
 .menu-btn:hover {
   background: var(--surface-alt);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   .menu-btn {
     display: inline-flex;
   }
@@ -351,12 +384,12 @@ nav a.btn.active::after {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    padding: 0.75rem 1.25rem 1.5rem;
+    padding: 0.75rem 1.5rem 1.75rem;
   }
   
   nav li a {
     display: block;
-    padding: 0.9rem 0;
+    padding: 0.95rem 0;
     font-size: 1.05rem;
     border-bottom: 1px solid var(--line);
   }
@@ -376,71 +409,156 @@ nav a.btn.active::after {
   nav li:last-child a {
     border: 0;
     text-align: center;
-    padding: 0.75rem;
+    padding: 0.8rem;
   }
 }
 
 /* ==========================================================================
-   Hero Section
+   Expansive Desktop Hero Section with Background Photo & Crisp Overlay
    ========================================================================== */
 .hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, #FFFFFF 0%, var(--bg) 100%);
-  padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2.5rem, 6vw, 4.5rem);
+  background-image: 
+    linear-gradient(90deg, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255, 0.80) 42%, rgba(255, 255, 255, 0.52) 100%),
+    url("../photos/solar-irrigation-system.jpeg");
+  background-size: cover;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+  padding: clamp(3.5rem, 6vw, 6.5rem) 0 clamp(3rem, 5vw, 5.5rem);
   border-bottom: 1px solid var(--line);
 }
 
-.hero .wrap {
+.hero-grid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
   position: relative;
   z-index: 1;
+}
+
+@media (min-width: 1080px) {
+  .hero-grid {
+    grid-template-columns: 1.25fr 0.95fr;
+    gap: 4.5rem;
+  }
+}
+
+.hero-left {
   display: grid;
-  gap: 1.5rem;
-  max-width: 880px;
+  gap: 1.35rem;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: clamp(1.75rem, 3.2vw, 2.75rem);
+  border-radius: 20px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 12px 32px -4px rgba(15, 23, 42, 0.08);
+}
+
+.hero-brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(22, 163, 74, 0.1);
+  border: 1px solid rgba(22, 163, 74, 0.28);
+  padding: 0.45rem 1.15rem;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.hero-brand-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+}
+
+.hero-brand-name {
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  color: #15803D;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  margin: 0;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.85rem;
-  margin-top: 0.5rem;
+  gap: 1rem;
+  margin-top: 0.25rem;
 }
 
-.contours {
-  position: absolute;
-  right: -5%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: min(55%, 680px);
-  color: var(--accent);
-  opacity: 0.18;
-  pointer-events: none;
+/* Hero Right: Featured Field Photo Card */
+.hero-featured-photo-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px -6px rgba(15, 23, 42, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.contours path {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.4;
+.hero-featured-photo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 42px -6px rgba(15, 23, 42, 0.18);
 }
 
-@media (max-width: 860px) {
-  .contours {
-    display: none;
-  }
+.hero-featured-photo-wrap {
+  position: relative;
+  width: 100%;
 }
 
-/* Subpage Hero / Banner */
+.hero-featured-img {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-featured-caption {
+  padding: 1.25rem 1.5rem 1.4rem;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  border-top: 1px solid var(--line);
+}
+
+.hero-featured-caption h4 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--ink);
+}
+
+.hero-featured-caption p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+/* Subpage Hero / Banner with subtle authentic background texture */
 .page-hero {
   position: relative;
-  padding: clamp(2.5rem, 5vw, 4rem) 0 clamp(2rem, 4vw, 3rem);
-  background: var(--surface);
+  padding: clamp(2.75rem, 4.5vw, 4.5rem) 0 clamp(2.25rem, 3.5vw, 3.5rem);
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.92) 100%),
+    url("../photos/crop-monitoring-field.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-bottom: 1px solid var(--line);
 }
 
 .page-hero .wrap {
   display: grid;
   gap: 0.85rem;
-  max-width: 840px;
 }
 
 .page-tag {
@@ -448,7 +566,7 @@ nav a.btn.active::after {
   align-items: center;
   gap: 0.4rem;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   color: var(--accent);
@@ -460,7 +578,7 @@ nav a.btn.active::after {
 .partners-strip {
   border-bottom: 1px solid var(--line);
   background: var(--surface);
-  padding: 1.35rem 0;
+  padding: 1.5rem 0;
 }
 
 .partners-wrap {
@@ -468,11 +586,11 @@ nav a.btn.active::after {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1rem 2rem;
+  gap: 1.25rem 2.5rem;
 }
 
 .partners-label {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -484,15 +602,15 @@ nav a.btn.active::after {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.75rem 1.75rem;
+  gap: 0.85rem 2rem;
 }
 
 .partner-tag {
-  font-size: 0.92rem;
+  font-size: 0.96rem;
   font-weight: 600;
   color: var(--ink-secondary);
   background: var(--surface-alt);
-  padding: 0.35rem 0.75rem;
+  padding: 0.4rem 0.9rem;
   border-radius: 6px;
   border: 1px solid var(--line);
   transition: all 0.15s ease;
@@ -508,7 +626,7 @@ nav a.btn.active::after {
 .pillars-bar {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem 0.85rem;
+  gap: 0.5rem 1rem;
   align-items: center;
 }
 
@@ -516,7 +634,7 @@ nav a.btn.active::after {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   font-weight: 600;
   color: var(--ink-secondary);
   text-transform: uppercase;
@@ -526,7 +644,7 @@ nav a.btn.active::after {
 .pillar-item::before {
   content: "•";
   color: var(--accent);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 .pillar-item:first-child::before {
@@ -537,17 +655,17 @@ nav a.btn.active::after {
    Sections & Layout
    ========================================================================== */
 section {
-  padding: clamp(3rem, 6vw, 5rem) 0;
+  padding: clamp(3.5rem, 5.5vw, 6rem) 0;
 }
 
 .head {
   display: grid;
-  gap: 0.75rem;
-  margin-bottom: 2.5rem;
-  max-width: 68ch;
+  gap: 0.85rem;
+  margin-bottom: 3rem;
+  max-width: 90ch;
 }
 
-/* Clean Light Sections (Replacing former dark blue .deep blocks) */
+/* Clean Light Sections */
 .deep, .section-soft {
   background: var(--surface);
   color: var(--ink);
@@ -571,15 +689,15 @@ section {
   display: grid;
   gap: 0;
   counter-reset: s;
-  max-width: 860px;
+  width: 100%;
 }
 
 .steps li {
   counter-increment: s;
   display: grid;
-  grid-template-columns: 3.2rem 1fr;
-  gap: 1.25rem;
-  padding: 1.6rem 0;
+  grid-template-columns: 4rem 1fr;
+  gap: 1.5rem;
+  padding: 1.85rem 0;
   border-top: 1px solid var(--line);
 }
 
@@ -590,47 +708,53 @@ section {
 .steps li::before {
   content: "0" counter(s);
   font-family: var(--serif);
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   line-height: 1;
   color: var(--accent);
   font-weight: 600;
 }
 
 .steps h3 {
-  margin-bottom: 0.35rem;
-  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.35rem;
 }
 
 /* ==========================================================================
-   Services Grid & Detailed Practice Cards
+   Full-Width Services Grid & Practice Cards
    ========================================================================== */
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+  gap: 2rem;
+}
+
+@media (min-width: 1280px) {
+  .services {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .service {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 1.75rem;
+  border-radius: 14px;
+  padding: 2rem;
   display: grid;
-  gap: 0.85rem;
+  gap: 1rem;
   align-content: start;
   box-shadow: var(--card-shadow);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .service:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: var(--card-shadow-hover);
   border-color: var(--accent-border);
 }
 
 .service p {
   color: var(--muted);
-  font-size: 0.98rem;
+  font-size: 1rem;
 }
 
 .service-link {
@@ -641,7 +765,7 @@ section {
   align-items: center;
   gap: 0.35rem;
   margin-top: 0.5rem;
-  font-size: 0.92rem;
+  font-size: 0.95rem;
 }
 
 .service-link:hover {
@@ -652,23 +776,23 @@ section {
 /* Detailed Practice Cards on services.html */
 .services-detailed {
   display: grid;
-  gap: 2rem;
+  gap: 2.25rem;
 }
 
 .service-card {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border-radius: 16px;
+  padding: clamp(1.75rem, 4vw, 3rem);
   display: grid;
-  gap: 1.75rem;
+  gap: 2rem;
   box-shadow: var(--card-shadow);
 }
 
-@media (min-width: 880px) {
+@media (min-width: 960px) {
   .service-card {
-    grid-template-columns: 1fr 1.35fr;
-    gap: 3.5rem;
+    grid-template-columns: 1fr 1.45fr;
+    gap: 4.5rem;
     align-items: start;
   }
 }
@@ -676,17 +800,17 @@ section {
 .service-features {
   list-style: none;
   padding: 0;
-  margin: 1.25rem 0 0;
+  margin: 1.35rem 0 0;
   display: grid;
-  gap: 0.85rem;
+  gap: 0.95rem;
 }
 
 .service-features li {
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
+  gap: 0.85rem;
   color: var(--ink-secondary);
-  font-size: 0.98rem;
+  font-size: 1rem;
 }
 
 .service-features svg {
@@ -700,91 +824,97 @@ section {
    ========================================================================== */
 .about {
   display: grid;
-  gap: 2.5rem;
+  gap: 3rem;
   grid-template-columns: 1fr;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1024px) {
   .about {
-    grid-template-columns: 1.2fr 1fr;
-    gap: 4.5rem;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 5rem;
     align-items: start;
   }
 }
 
 .principles {
   display: grid;
-  gap: 1.5rem;
+  gap: 1.75rem;
 }
 
 .principles div {
-  padding-left: 1.25rem;
+  padding-left: 1.35rem;
   border-left: 3px solid var(--accent);
 }
 
 .principles h3 {
-  font-size: 1.15rem;
-  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
+  margin-bottom: 0.3rem;
 }
 
 .principles p {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.98rem;
 }
 
 .who {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 1.25rem;
+  margin-top: 2.5rem;
 }
 
 .who div {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 1.35rem;
+  border-radius: 12px;
+  padding: 1.5rem;
   box-shadow: var(--card-shadow);
 }
 
 .who h3 {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   margin-bottom: 0.35rem;
 }
 
 .who p {
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
 }
 
-/* Track Record Works Grid */
+/* Track Record Works Grid (Wide 4-Column on Desktop) */
 .works-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+  gap: 1.75rem;
   margin-top: 2rem;
+}
+
+@media (min-width: 1440px) {
+  .works-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .work-card {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 1.6rem;
+  border-radius: 14px;
+  padding: 1.75rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.85rem;
   box-shadow: var(--card-shadow);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .work-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   box-shadow: var(--card-shadow-hover);
   border-color: var(--accent-border);
 }
 
 .work-client {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--accent);
@@ -792,32 +922,32 @@ section {
 }
 
 .work-dates {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: var(--muted);
   font-weight: 500;
 }
 
 /* ==========================================================================
-   Photo Gallery Grid & Lightbox
+   Full-Desktop 4-Column Photo Gallery Grid & Lightbox
    ========================================================================== */
 .gallery-section {
-  padding: clamp(2.5rem, 5vw, 4.5rem) 0;
+  padding: clamp(3rem, 5vw, 5.5rem) 0;
 }
 
 .gallery-filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
+  gap: 0.6rem;
+  margin-bottom: 2.25rem;
 }
 
 .filter-btn {
   background: var(--surface);
   border: 1px solid var(--line);
   color: var(--muted);
-  padding: 0.5rem 1.1rem;
+  padding: 0.55rem 1.25rem;
   border-radius: 999px;
-  font: 500 0.9rem var(--sans);
+  font: 500 0.94rem var(--sans);
   cursor: pointer;
   transition: all 0.15s ease;
 }
@@ -833,23 +963,30 @@ section {
   border-color: var(--ink);
 }
 
+/* 4-Column Wide Grid for Desktop */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
-  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+  gap: 2rem;
 }
 
-@media (max-width: 640px) {
+@media (min-width: 1280px) {
+  .gallery-grid.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
   .gallery-grid {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 1.5rem;
   }
 }
 
 .gallery-card {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
   box-shadow: var(--card-shadow);
   display: flex;
@@ -858,7 +995,7 @@ section {
 }
 
 .gallery-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   box-shadow: var(--card-shadow-hover);
   border-color: var(--accent-border);
 }
@@ -880,19 +1017,19 @@ section {
 }
 
 .gallery-card:hover .gallery-img {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 .gallery-expand-hint {
   position: absolute;
-  bottom: 0.75rem;
-  right: 0.75rem;
-  background: rgba(15, 23, 42, 0.8);
+  bottom: 0.85rem;
+  right: 0.85rem;
+  background: rgba(15, 23, 42, 0.82);
   backdrop-filter: blur(4px);
   color: #FFFFFF;
-  padding: 0.3rem 0.65rem;
+  padding: 0.35rem 0.75rem;
   border-radius: 6px;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 500;
   display: inline-flex;
   align-items: center;
@@ -906,11 +1043,11 @@ section {
 }
 
 .gallery-content {
-  padding: 1.35rem 1.45rem 1.5rem;
+  padding: 1.5rem 1.6rem 1.65rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  gap: 0.65rem;
+  gap: 0.75rem;
 }
 
 .gallery-meta {
@@ -922,11 +1059,11 @@ section {
 
 .gallery-badge {
   display: inline-block;
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  padding: 0.2rem 0.65rem;
+  padding: 0.22rem 0.7rem;
   border-radius: 999px;
   background: var(--accent-soft);
   color: var(--accent);
@@ -934,25 +1071,25 @@ section {
 }
 
 .gallery-date {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: var(--muted);
 }
 
 .gallery-title {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 1.3;
 }
 
 .gallery-desc {
   color: var(--muted);
-  font-size: 0.94rem;
+  font-size: 0.96rem;
   line-height: 1.6;
   margin: 0;
 }
 
 .gallery-footer-action {
   margin-top: auto;
-  padding-top: 0.85rem;
+  padding-top: 1rem;
   border-top: 1px solid var(--line);
   display: flex;
   align-items: center;
@@ -964,7 +1101,7 @@ section {
   border: 0;
   padding: 0;
   color: var(--accent);
-  font: 600 0.9rem var(--sans);
+  font: 600 0.92rem var(--sans);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -980,13 +1117,13 @@ section {
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(6px);
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(8px);
   z-index: 2000;
   display: none;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .modal-backdrop.open {
@@ -996,13 +1133,13 @@ section {
 .modal-window {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 14px;
-  max-width: 860px;
+  border-radius: 16px;
+  max-width: 940px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.28);
   animation: modalScale 0.2s ease-out;
 }
 
@@ -1013,15 +1150,15 @@ section {
 
 .modal-close {
   position: absolute;
-  top: 0.85rem;
-  right: 0.85rem;
-  width: 36px;
-  height: 36px;
+  top: 1rem;
+  right: 1rem;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   border: 1px solid var(--line);
   background: var(--surface);
   color: var(--ink);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   line-height: 1;
   display: flex;
   align-items: center;
@@ -1037,7 +1174,7 @@ section {
 
 .modal-img-wrap {
   width: 100%;
-  max-height: 480px;
+  max-height: 520px;
   background: #0F172A;
   display: flex;
   align-items: center;
@@ -1046,57 +1183,57 @@ section {
 
 .modal-img-wrap img {
   max-width: 100%;
-  max-height: 480px;
+  max-height: 520px;
   object-fit: contain;
 }
 
 .modal-body {
-  padding: 1.5rem 1.75rem 1.75rem;
+  padding: 1.75rem 2rem 2rem;
   display: grid;
-  gap: 0.65rem;
+  gap: 0.75rem;
 }
 
 /* ==========================================================================
-   Consultation & Contact Form
+   Consultation & Contact Form (Wide 2-Column Desktop)
    ========================================================================== */
 .book {
   display: grid;
-  gap: 2.5rem;
+  gap: 3rem;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1024px) {
   .book {
-    grid-template-columns: 1fr 1.15fr;
-    gap: 4.5rem;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 5.5rem;
     align-items: start;
   }
 }
 
 .book ul {
-  margin: 1.25rem 0 0;
-  padding-left: 1.2rem;
+  margin: 1.5rem 0 0;
+  padding-left: 1.3rem;
   color: var(--ink-secondary);
 }
 
 .book li {
-  margin: 0.4rem 0;
-  font-size: 0.98rem;
+  margin: 0.45rem 0;
+  font-size: 1.02rem;
 }
 
 .contact-cards {
   display: grid;
-  gap: 1rem;
-  margin-top: 2rem;
+  gap: 1.25rem;
+  margin-top: 2.25rem;
 }
 
 .contact-card {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 1.25rem;
+  border-radius: 12px;
+  padding: 1.4rem;
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1.15rem;
   box-shadow: var(--card-shadow);
 }
 
@@ -1107,31 +1244,31 @@ section {
 }
 
 .contact-card h4 {
-  margin-bottom: 0.2rem;
-  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  font-size: 1.05rem;
 }
 
 .contact-card p {
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
 }
 
 form {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: clamp(1.4rem, 3.5vw, 2.25rem);
+  border-radius: 16px;
+  padding: clamp(1.6rem, 4vw, 2.75rem);
   display: grid;
-  gap: 1.15rem;
+  gap: 1.25rem;
   box-shadow: var(--card-shadow);
 }
 
 .row {
   display: grid;
-  gap: 1.15rem;
+  gap: 1.25rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 640px) {
   .row {
     grid-template-columns: 1fr 1fr;
   }
@@ -1139,9 +1276,9 @@ form {
 
 label {
   display: grid;
-  gap: 0.35rem;
+  gap: 0.4rem;
   font-weight: 500;
-  font-size: 0.94rem;
+  font-size: 0.96rem;
   color: var(--ink);
 }
 
@@ -1151,14 +1288,14 @@ input, select, textarea {
   background: #FFFFFF;
   border: 1.5px solid var(--line);
   border-radius: 8px;
-  padding: 0.75rem 0.9rem;
-  min-height: 48px;
+  padding: 0.8rem 1rem;
+  min-height: 50px;
   width: 100%;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 textarea {
-  min-height: 120px;
+  min-height: 130px;
   resize: vertical;
 }
 
@@ -1169,7 +1306,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .hint {
-  font-size: 0.85rem;
+  font-size: 0.86rem;
   color: var(--muted);
   font-weight: 400;
 }
@@ -1182,23 +1319,24 @@ input:focus, select:focus, textarea:focus {
 }
 
 #status {
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   color: var(--ink-secondary);
   line-height: 1.5;
 }
 
-/* Call to Action Banner (Clean Light Version) */
+/* Call to Action Banner */
 .cta-banner {
   background: linear-gradient(135deg, #FFFFFF 0%, #F0FDF4 100%);
   border: 1.5px solid var(--accent-border);
   color: var(--ink);
-  border-radius: 16px;
-  padding: clamp(2.5rem, 5vw, 3.75rem);
+  border-radius: 18px;
+  padding: clamp(2.75rem, 5vw, 4.5rem);
   text-align: center;
   display: grid;
   gap: 1.25rem;
   justify-items: center;
   box-shadow: var(--card-shadow);
+  width: 100%;
 }
 
 .cta-banner h2 {
@@ -1210,13 +1348,13 @@ input:focus, select:focus, textarea:focus {
 }
 
 /* ==========================================================================
-   Footer
+   Full-Width Footer
    ========================================================================== */
 footer {
   border-top: 1px solid var(--line);
-  padding: 3rem 0 2rem;
+  padding: 3.5rem 0 2.5rem;
   color: var(--muted);
-  font-size: 0.94rem;
+  font-size: 0.96rem;
   background: var(--surface);
   margin-top: auto;
 }
@@ -1224,21 +1362,21 @@ footer {
 .footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: 3rem;
-  margin-bottom: 2.5rem;
+  gap: 4rem;
+  margin-bottom: 3rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.25rem;
   }
 }
 
 .footer-brand {
   display: grid;
-  gap: 0.75rem;
-  max-width: 44ch;
+  gap: 0.85rem;
+  max-width: 48ch;
 }
 
 .footer-links {
@@ -1246,7 +1384,7 @@ footer {
   padding: 0;
   margin: 0;
   display: grid;
-  gap: 0.65rem;
+  gap: 0.75rem;
 }
 
 .footer-links a {
@@ -1260,7 +1398,7 @@ footer {
 
 .footer-bottom {
   border-top: 1px solid var(--line);
-  padding-top: 1.5rem;
+  padding-top: 1.75rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem 2rem;
